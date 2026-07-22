@@ -161,3 +161,31 @@ Está diseñado para ser entregado como **trabajo de curso de Organización y M�
 
 ¿Deseas que agregue más procesos (ej. Gestión de Incidentes, Onboarding de Nuevos Usuarios, Cierre de Semestre, etc.) o que prepare una versión con PlantUML para generar diagramas reales?
 
+
+
+
+
+
+# Auditoría de Analista BPMN (León Hatches)
+
+## ¿Qué está bien?
+Se tiene la siguiente lista de aspectos que se realizaron de manera correcta:
+- Identifica correctamente a los actores clave (Administrador de lab, Responsable de Imágenes, Docente, Estudiante) y cuenta con una matriz RACI.
+- Integra correctamente el concepto de "Chapter de Organización" para mantener la mejora continua sin entorpecer a los equipos técnicos.
+- Además, propone un set inicial de KPIs, lo cual es excelente para la medición del desempeño.
+
+## ¿Qué está mal o puede mejorarse?
+Entre lo que puede mejorar, se tiene lo siguiente:
+- La representación de los procesos BPMN es exclusivamente textual, por lo que no cumple con el estándar visual formal para el modelado de procesos.
+- La matriz RACI asigna el rol de "R/A" (Responsable y Aprobador) al Responsable de Imágenes en la creación de nuevas imágenes, rompiendo el principio de segregación de funciones.
+
+## ¿Qué falta?
+Se obtiene la siguiente lista de carencias:
+- Faltan los diagramas BPMN reales en herramientas gráficas.
+- Falta incluir flujos de procesos de soporte críticos sugeridos en el mismo documento, como Gestión de Incidentes y Onboarding de Nuevos Usuarios.
+
+## ¿Qué proponemos?
+Se propone los siguientes puntos:
+- Rediseñar la Matriz RACI separando claramente quién ejecuta (R) y quién aprueba (A).
+- Elaborar fichas técnicas detalladas para los KPIs propuestos.
+- Modelar gráficamente todos los procesos.
