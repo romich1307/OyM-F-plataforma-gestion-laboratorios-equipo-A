@@ -129,3 +129,45 @@
 4. Definir Definition of Done (DoD) común.
 
 ---
+
+# Auditoría de Analista Organizacional (Jose Morocco)
+
+## ¿Qué está bien?
+<div style="color:red;">
+
+Se tiene la siguiente lista de aspectos que se realizaron de manera correcta:
+
+- Las 6 Épicas cubren el sistema de manera integral y la priorización MoSCoW está bien aplicada.
+- La evaluación para estructurar el Chapter de Organización es sólida y utiliza formatos estándar.
+
+</div>
+
+## ¿Qué está mal o puede mejorarse?
+<div style="color:red;">
+
+Entre lo que puede mejorar, se tiene lo siguiente:
+
+- Las Épicas 2 a 6 solo listan tareas técnicas sin enfoque de valor, y los criterios son muy generales.
+- Ningún ítem tiene estimación en story points y se menciona un rol inexistente (Jefe de Laboratorio).
+
+</div>
+
+## ¿Qué falta?
+<div style="color:red;">
+
+Se obtiene la siguiente lista de carencias:
+
+- Faltan estimaciones ágiles, un Definition of Done (DoD) y Definition of Ready (DoR) formales.
+- Faltan épicas dedicadas exclusivamente a Seguridad y Gobernanza de imágenes.
+
+</div>
+
+## ¿Qué proponemos?
+<div style="color:red;">
+
+Se propone los siguientes puntos:
+
+- Transformar tareas técnicas en historias de usuario con criterios propios usando Planning Poker.
+- Separar infraestructura en un "Backlog Técnico" y crear épicas de Seguridad y Gobernanza.
+
+</div>

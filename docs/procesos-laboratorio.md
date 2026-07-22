@@ -189,3 +189,56 @@ Se propone los siguientes puntos:
 - Rediseñar la Matriz RACI separando claramente quién ejecuta (R) y quién aprueba (A).
 - Elaborar fichas técnicas detalladas para los KPIs propuestos.
 - Modelar gráficamente todos los procesos.
+
+---
+
+# Auditoría de Analista Organizacional (Jose Morocco)
+
+<div style="color:red;">
+
+*Nota: Esta sección analiza exclusivamente la Matriz RACI de la Sección 4, cuya evaluación recae en el rol de Analista Organizacional.*
+
+</div>
+
+## ¿Qué está bien?
+<div style="color:red;">
+
+Se tiene la siguiente lista de aspectos que se realizaron de manera correcta:
+
+- El uso de la metodología RACI refleja correctamente la autoridad formal del Administrador.
+- Asignar R/A al Responsable de Imágenes en su creación es correcto por su propiedad técnica.
+
+</div>
+
+## ¿Qué está mal o puede mejorarse?
+<div style="color:red;">
+
+Entre lo que puede mejorar, se tiene lo siguiente:
+
+- Agrupar "Solicitud" y "Aprobación" en una sola fila destruye la claridad: solicitar no es aprobar.
+- El Chapter de Organización figura como Consulted (C) sin ningún mecanismo definido de consulta.
+- El Docente está subutilizado (solo Consulted) cuando él origina las solicitudes de nuevas imágenes.
+
+</div>
+
+## ¿Qué falta?
+<div style="color:red;">
+
+Se obtiene la siguiente lista de carencias:
+
+- Faltan columnas para "Chapter Leads Técnicos" y "Encargado de Laboratorio", activos pero ausentes.
+- Faltan procesos críticos no mapeados: Gestión de Incidentes, Auditoría y Onboarding/Offboarding.
+- Faltan las matrices complementarias de Comunicación y de Escalamiento (niveles N0 a N4).
+
+</div>
+
+## ¿Qué proponemos?
+<div style="color:red;">
+
+Se propone los siguientes puntos:
+
+- Desdoblar "Solicitud y Aprobación de Imágenes" en dos filas independientes con actores correctos.
+- Presentar una Matriz RACI corregida con 15 actividades y 7 roles, incluyendo lo faltante.
+- Crear documentos formales de Matriz de Comunicación y Matriz de Escalamiento como entregables.
+
+</div>
