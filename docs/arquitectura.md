@@ -124,7 +124,7 @@ Este modelo permite aprovechar la infraestructura local del laboratorio (Proxmox
 
 <div style="color:red">
 
-## Comentario del Integrante 1 — Revisión de `docs/arquitectura.md`
+## Auditoría del Integrante 1 / Paola Adamari Mayta Quispe — `docs/arquitectura.md`
 
 ### ¿Qué está bien?
 

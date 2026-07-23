@@ -134,7 +134,7 @@ Ante una falla crítica durante el piloto, se debe activar el entorno local de r
 
 <div style="color:red">
 
-## Comentario del Integrante 1 — Revisión de `docs/fases-implementacion.md`
+## Auditoría del Integrante 1 / Paola Adamari Mayta Quispe — `docs/fases-implementacion.md`
 
 ### ¿Qué está bien?
 

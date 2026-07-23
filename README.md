@@ -223,7 +223,7 @@ Esta plataforma representa una oportunidad estratégica para modernizar los labo
 
 <div style="color:red">
 
-## Comentario del Integrante 1 — Revisión de `README.md`
+## Auditoría del Integrante 1 / Paola Adamari Mayta Quispe — `README.md`
 
 ### ¿Qué está bien?
 

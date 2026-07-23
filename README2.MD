@@ -86,7 +86,7 @@ Ver detalle completo en: [`docs/fases-implementacion.md`](docs/fases-implementac
 
 <div style="color:red">
 
-## Comentario del Integrante 1 — Revisión de `README2.MD`
+## Auditoría del Integrante 1 / Paola Adamari Mayta Quispe — `README2.MD`
 
 ### ¿Qué está bien?
 
