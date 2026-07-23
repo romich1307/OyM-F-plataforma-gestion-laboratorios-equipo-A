@@ -218,3 +218,42 @@ Esta plataforma representa una oportunidad estratégica para modernizar los labo
 ---
 
 *Documento preparado para repositorio GitHub. Puedes copiar todo este contenido directamente en un archivo `README.md`.*
+
+---
+
+<div style="color:red">
+
+## Comentario del Integrante 1 — Revisión de `README.md`
+
+### ¿Qué está bien?
+
+- Presenta con claridad el problema de la gestión fragmentada de los laboratorios y plantea una solución híbrida aplicable al ámbito universitario y empresarial.
+- Los objetivos guardan relación con la problemática: estandarización de entornos, trazabilidad, gestión de usuarios, hardware e imágenes de contenedores.
+- Resume la arquitectura, las fases y el modelo organizacional, por lo que ofrece una visión general útil del proyecto.
+- Considera beneficios para estudiantes, administradores y empresas, y propone una implementación gradual.
+
+### ¿Qué está mal o puede mejorarse?
+
+- El documento presenta problemas de codificación de caracteres, lo que afecta su legibilidad y presentación profesional.
+- Mezcla en un mismo alcance las necesidades universitarias y empresariales sin delimitar claramente qué funcionalidades corresponden a cada versión.
+- Los objetivos y beneficios son generales y no incluyen indicadores verificables, línea base ni metas.
+- Se adopta el modelo Spotify sin justificar suficientemente su viabilidad para la cantidad real de participantes.
+- La frase final que indica que el contenido puede copiarse a un README no corresponde a un documento definitivo del proyecto.
+
+### ¿Qué falta?
+
+- Identificación de la universidad, responsables, partes interesadas y población beneficiaria.
+- Alcance y exclusiones del proyecto, supuestos, restricciones, riesgos y estimación presupuestaria.
+- Indicadores de éxito, por ejemplo: reducción del tiempo de instalación, disponibilidad de la plataforma y satisfacción de usuarios.
+- Enlaces válidos y consistentes. Se mencionan archivos que no existen actualmente, como `roles-habilidades.md`, `costos.md`, `CODE_OF_CONDUCT.md` y `CONTRIBUTING.md`.
+- Una explicación de la gobernanza de datos, software, imágenes Docker y licencias.
+
+### ¿Qué proponemos?
+
+- Separar el alcance académico del empresarial mediante una tabla de funcionalidades, entregables y criterios de aceptación por versión.
+- Convertir los objetivos en metas SMART y asociarles indicadores, responsables y medios de verificación.
+- Corregir la codificación a UTF-8 y completar o retirar las referencias a documentos inexistentes.
+- Incorporar secciones de alcance, exclusiones, interesados, riesgos, presupuesto y gobernanza.
+- Mantener el README como documento ejecutivo y enlazar desde él los detalles técnicos y organizacionales ubicados en `docs/`.
+
+</div>

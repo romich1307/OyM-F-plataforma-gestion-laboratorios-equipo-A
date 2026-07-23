@@ -129,3 +129,40 @@ Ante una falla crítica durante el piloto, se debe activar el entorno local de r
 - **Product Owner institucional:** un coordinador de carrera o Chapter Lead senior, con carácter permanente, que no rota con cada cohorte de estudiantes.
 - **Comité de Gobierno:** integrado por el Product Owner institucional, Administrador de Laboratorio y representantes de Chapters, con checkpoints mensuales.
 - **Presupuesto:** cada fase debe contar con una partida presupuestaria aprobada antes de su inicio (ver Anexo de Estimación de Costos).
+
+---
+
+<div style="color:red">
+
+## Comentario del Integrante 1 — Revisión de `docs/fases-implementacion.md`
+
+### ¿Qué está bien?
+
+- La versión ampliada mejora considerablemente el listado original al incluir entregables, dependencias y criterios de salida por fase.
+- Considera riesgos propios del entorno universitario, gestión del cambio, transferencia de conocimiento y continuidad entre cohortes.
+- El piloto incluye un mecanismo de reversión y criterios relacionados con continuidad y satisfacción.
+- Se reconoce que la mejora continua debe mantenerse después de la puesta en producción.
+
+### ¿Qué está mal o puede mejorarse?
+
+- Existe una inconsistencia al indicar que 4-6 meses equivalen a dos semestres académicos.
+- En la Fase 1 se propone como entregable un curso piloto, pero como criterio de salida se exigen tres cursos; la transición no está explicada.
+- No se indican fechas, responsables, esfuerzo, costos ni recursos asignados a cada actividad.
+- La Fase 3 no tiene duración estimada y la Fase 4 no define una línea base para evaluar las mejoras.
+
+### ¿Qué falta?
+
+- Cronograma Gantt o roadmap con actividades, dependencias, responsables e hitos.
+- Presupuesto por fase, plan de adquisiciones y disponibilidad del personal docente y técnico.
+- Matriz RACI del proyecto y mecanismo formal para aprobar cambios de alcance.
+- Plan detallado de pruebas funcionales, seguridad, rendimiento, aceptación del usuario y cierre.
+
+### ¿Qué proponemos?
+
+- Corregir las duraciones y expresar el calendario en semanas académicas, incluyendo exámenes y vacaciones.
+- Asignar un responsable y un aprobador a cada entregable, con fecha comprometida y evidencia de aceptación.
+- Elaborar un Gantt general y administrar la ejecución mediante un tablero Kanban con columnas Pendiente, En curso, En revisión y Terminado.
+- Dividir el piloto en uno controlado con un curso y una ampliación posterior a tres cursos, condicionada al cumplimiento de los KPIs.
+- Establecer revisiones quincenales, control de riesgos y un informe de cierre por cada fase.
+
+</div>

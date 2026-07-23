@@ -119,3 +119,39 @@ Este modelo permite aprovechar la infraestructura local del laboratorio (Proxmox
 - **Disponibilidad en horario lectivo:** ≥ 99%.
 - **Recuperación ante fallo de nodo:** ≤ 15 minutos.
 - **Tiempo de aprovisionamiento de entorno:** ≤ 5 minutos.
+
+---
+
+<div style="color:red">
+
+## Comentario del Integrante 1 — Revisión de `docs/arquitectura.md`
+
+### ¿Qué está bien?
+
+- La versión mejorada ya justifica el uso del modelo híbrido y explica la función de los componentes principales.
+- Los diagramas permiten comprender mejor la relación entre la infraestructura local, la nube y las zonas de confianza.
+- Se incorporan aspectos necesarios de segmentación, alta disponibilidad, capacidad, respaldos, recuperación, observabilidad y niveles de servicio.
+- La consideración del “efecto campana” representa adecuadamente el uso simultáneo propio de una clase.
+
+### ¿Qué está mal o puede mejorarse?
+
+- La selección tecnológica todavía se presenta como decisión definitiva sin comparar alternativas, costos, licencias ni capacidades disponibles en la universidad.
+- No se define un proveedor de nube, el tipo de enlace entre nube y campus ni la responsabilidad de operar cada componente.
+- Algunos objetivos técnicos no indican cómo se medirán; por ejemplo, disponibilidad y recuperación requieren fuente de datos, periodo de medición y responsable.
+- Se describen componentes y zonas, pero falta detallar el flujo completo de autenticación, publicación y descarga de una imagen.
+
+### ¿Qué falta?
+
+- Inventario y dimensionamiento inicial de CPU, memoria, almacenamiento, ancho de banda y número de usuarios concurrentes.
+- Gestión de secretos, cifrado en tránsito y reposo, rotación de credenciales y registros de auditoría.
+- Matriz de responsabilidades operativas y un procedimiento formal de gestión de cambios.
+- Estimación de costos, dependencias externas y criterios para decidir qué carga se ejecuta localmente o en la nube.
+
+### ¿Qué proponemos?
+
+- Añadir una tabla de decisiones de arquitectura con alternativa evaluada, criterio, justificación, costo y responsable.
+- Incorporar diagramas de secuencia para autenticación, solicitud/publicación de imágenes y recuperación ante fallos.
+- Realizar una prueba de carga con usuarios concurrentes y usar sus resultados para dimensionar la infraestructura.
+- Definir controles de seguridad y responsables tomando como referencia ISO/IEC 27001, DevSecOps y el principio de mínimo privilegio.
+
+</div>
