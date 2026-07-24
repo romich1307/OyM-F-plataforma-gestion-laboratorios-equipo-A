@@ -407,6 +407,10 @@ Para convertir la propuesta organizacional en un proyecto ejecutable, el present
 
 ### 10.1 Roadmap de implementación académica
 
+![Diagrama de Gantt del roadmap de implementación académica](./roadmap-implementacion-academica.png)
+
+> **Archivo editable:** [Roadmap de Implementación Tecnológica](./Roadmap_Implementacion_Tecnologica.xlsx)
+
 El roadmap corrige la equivalencia temporal del proyecto original y organiza el trabajo alrededor de un año lectivo estándar de dos semestres de 17 semanas. La validación del MVP durante el periodo intersemestral estará condicionada a la disponibilidad voluntaria o formalmente asignada del equipo.
 
 | Fase | Nombre | Duración | Ancla académica | Hito de salida |
