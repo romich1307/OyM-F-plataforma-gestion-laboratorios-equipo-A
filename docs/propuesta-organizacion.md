@@ -112,6 +112,9 @@ Para dimensionar el impacto de estos problemas en la realidad académica de la f
 | :--- | :--- | :--- |
 | **Instalación Manual (Cuello de Botella)** | El equipo de soporte instala el software requerido máquina por máquina al inicio del ciclo. | Toma de 2 a 3 semanas. En un semestre de 16 semanas (agosto-diciembre), representa una pérdida de casi el 20% del tiempo lectivo. |
 | **Inconsistencia de Entornos** | Falta de estandarización entre las computadoras del laboratorio y las PCs portátiles de los estudiantes. | Alta tasa de incidentes técnicos en clase ("Funciona en mi máquina") y pérdida de tiempo diagnosticando errores. |
+| **Ausencia de SLAs Operativos** | Solicitudes de nuevo software mediante procesos burocráticos y manuales sin tiempos de respuesta definidos. | Los docentes pueden esperar semanas por una aplicación, retrasando o cancelando prácticas de laboratorio. |
+| **Falta de Trazabilidad y Gobernanza** | Nulo control sobre versiones instaladas, procedencia del código y estado de las licencias de uso. | Riesgos legales por infracción de propiedad intelectual y exposición a brechas de seguridad informática. |
+| **Subutilización de Hardware** | Reservas gestionadas por canales informales (correos o bases de datos desactualizadas). | Solapamiento de horarios, tiempos muertos entre clases y subutilización de la infraestructura instalada. |
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
