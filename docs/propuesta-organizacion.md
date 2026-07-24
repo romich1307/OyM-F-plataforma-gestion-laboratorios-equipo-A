@@ -71,3 +71,44 @@ Se verificó que cada problema identificado tuviera una recomendación o mecanis
 #### Etapa 6: Consolidación de entregables
 
 Finalmente, se integraron los aportes en dos productos: el Informe de Revisión y Comentarios y la Propuesta de Organización.
+
+### 2.3 Cronograma y recursos de la consultoría
+
+El trabajo documental se organizó en cuatro jornadas. Esta planificación representa el esfuerzo del equipo consultor y no el tiempo de implementación técnica de toda la plataforma.
+
+| Actividad | Responsable principal | Duración | Esfuerzo estimado | Recurso requerido | Resultado |
+|---|---|---:|---:|---|---|
+| Revisión del repositorio | Todo el equipo | 1 día | 2 h por integrante | Repositorio y documentos base | Comprensión de la propuesta |
+| Distribución de archivos | Scrum Master | 1 día | 1 h | Reunión de coordinación | Responsabilidades asignadas |
+| Auditoría documental | Todos, según asignación | 2 días | 4 h por integrante | GitHub y criterios de revisión | Comentarios por archivo |
+| Diagnóstico AS-IS | Product Owner | 1 día | 4 h | Hallazgos de la auditoría | Problemas identificados |
+| Diseño de procesos | Analista BPMN | 2 días | 6 h | Herramienta de modelado | Procesos documentados |
+| Diseño organizacional | Analista Organizacional | 2 días | 6 h | Matrices y documentación | Roles, matrices y gobierno |
+| Revisión integral | Scrum Master y equipo | 1 día | 2 h por integrante | Documento consolidado | Corrección de inconsistencias |
+| Consolidación y presentación | Todo el equipo | 1 día | 2 h por integrante | Word, Markdown y GitHub | Entregables finales |
+
+### 2.4 Roadmap preliminar de implementación
+
+Para mantener una propuesta realista, el roadmap diferencia la consultoría académica de la futura implementación de la plataforma. Los montos son rangos referenciales y deberán validarse mediante inventario y cotizaciones institucionales.
+
+| Etapa | Duración estimada | Alcance y recursos humanos mínimos | Recursos técnicos | Presupuesto referencial |
+|---|---:|---|---|---:|
+| Diagnóstico y diseño detallado | 4 semanas | 1 responsable institucional, 1 administrador y 4 estudiantes | Inventario y acceso a infraestructura actual | S/ 1 000–3 000 |
+| MVP académico | 12–16 semanas | 1 docente responsable, 1 administrador y equipo de 4–6 estudiantes | Servidor existente, almacenamiento y red segmentada | S/ 8 000–20 000 |
+| Piloto controlado | 8 semanas | Equipo técnico, 2 docentes y soporte de primer nivel | 1 laboratorio y 2 cursos piloto | S/ 3 000–8 000 |
+| Evaluación y estabilización | 4 semanas | Comité de gobierno y responsables técnicos | Monitoreo, respaldos y pruebas | S/ 2 000–5 000 |
+| Escalamiento institucional | 12 semanas o más | Equipo permanente de operación y soporte | Capacidad adicional según demanda | Sujeto a resultados del piloto |
+
+El inicio de cada etapa depende de la aprobación de los entregables de la etapa anterior. No se recomienda adquirir infraestructura adicional antes de completar el inventario, la prueba de capacidad y el piloto.
+
+### 2.5 Tablero Kanban resumido
+
+| Pendiente | En proceso | En revisión | Terminado |
+|---|---|---|---|
+| Ajustes derivados de la exposición | Validación final de formato | Coherencia entre procesos y RACI | Revisión del repositorio |
+| Cotización institucional del piloto | Estimación detallada de recursos | Revisión ortográfica | Auditoría de archivos |
+| Validación del roadmap |  |  | Diagnóstico AS-IS |
+|  |  |  | Propuesta TO-BE |
+|  |  |  | Procesos y matrices |
+
+El Scrum Master actualiza el tablero después de cada reunión. Una actividad solo pasa a “Terminado” cuando cuenta con evidencia, responsable identificado y revisión de al menos otro integrante.
