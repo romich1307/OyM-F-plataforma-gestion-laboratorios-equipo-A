@@ -164,6 +164,10 @@ Se establecen directrices obligatorias para regir el ciclo de vida de los conten
 | **Software Propietario** | Integración de un gestor de licencias concurrente (Key Server) en Kubernetes. | Limita las instancias activas según el contrato. |
 | **Open Source (Copyleft)** | Licencias como GPL v3 o AGPL requieren auditoría previa y aprobación formal del Product Owner. | Evita el riesgo legal de contagio de código fuente propietario. |
 
+### 9.5 Importancia de la trazabilidad
+La trazabilidad permite auditar con precisión retrospectiva el origen, creador y estado de integridad de cualquier activo digital desplegado. En el ecosistema del laboratorio, esto significa conocer exactamente qué código fuente dio origen al contenedor, quién compiló la imagen, qué herramientas de terceros fueron añadidas y si se cuenta con los derechos de uso vigentes, facilitando análisis rápidos de causa raíz ante fallas de infraestructura o incidentes de seguridad.
+
+![diagrama: Gobernanza de Seguridad y Firma Digital)](./architecture/trazabilidad.jpg)
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
