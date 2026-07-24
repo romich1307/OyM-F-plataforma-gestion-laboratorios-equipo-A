@@ -100,6 +100,11 @@ El plan detallado para ejecutar la propuesta, incluyendo calendario académico, 
 |  |  |  | Procesos y matrices |
 
 El Scrum Master actualiza el tablero después de cada reunión. Una actividad solo pasa a “Terminado” cuando cuenta con evidencia, responsable identificado y revisión de al menos otro integrante.
+---
+
+## 3. Diagnóstico organizacional (AS-IS)
+
+La gestión de los laboratorios de cómputo tradicionales en la institución presenta ineficiencias estructurales críticas bajo el enfoque de procesos de Organización y Métodos (O&M). Al evaluar el flujo de valor, se evidencia que el modelo tradicional es incompatible con la agilidad que exige nuestro calendario académico.
 
 ## 10. Plan de implementación y viabilidad de recursos
 
