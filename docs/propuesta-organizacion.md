@@ -339,3 +339,26 @@ En coherencia con las brechas identificadas durante la auditoría (Documento 1),
 
 **Indicadores asociados:** Nivel de satisfacción docente con el laboratorio (encuesta semestral), porcentaje de cumplimiento del plan de inversión tecnológica.
 
+---
+
+### 5.2 Encargado de Laboratorio
+
+**Misión:** Supervisar la operación diaria del laboratorio físico y digital, garantizar la disponibilidad de los recursos, y actuar como punto de contacto entre la Dirección institucional y los usuarios del laboratorio (docentes y estudiantes).
+
+**Responsabilidades:**
+- Supervisar el inventario físico del laboratorio (computadoras, servidores, periféricos).
+- Gestionar el calendario de uso del laboratorio, asignando horarios a cursos y proyectos.
+- Aprobar o rechazar solicitudes de reserva especiales que se salgan del proceso estándar.
+- Coordinar con el Administrador de Plataforma la resolución de incidentes de alta prioridad (P1/P2).
+- Gestionar el proceso de onboarding de nuevos usuarios al inicio de cada semestre.
+- Coordinar el proceso de offboarding y cierre de semestre (desactivación de cuentas, depuración de datos).
+- Aprobar la incorporación de nuevas imágenes Docker al catálogo cuando el proceso escala a este nivel.
+- Generar reportes mensuales de uso del laboratorio para la Dirección.
+
+**Nivel de autoridad:** Gestión operativa general. Responde ante el Director. Tiene autoridad sobre el Administrador de Plataforma y el Personal de Soporte TI.
+
+**Limitaciones:** No puede aprobar cambios de política institucional ni comprometer presupuesto sin autorización del Director.
+
+**Indicadores asociados:** Tasa de utilización del laboratorio (horas usadas / horas disponibles), tiempo promedio de resolución de reservas conflictivas, número de incidentes P1/P2 por mes.
+
+
