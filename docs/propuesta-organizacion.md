@@ -269,7 +269,9 @@ Para este proceso se definen tres actores principales:
 
 ### 7.5.3. Diagrama
 
-
+<div align="center">
+  <img src="./diagrams/Gestión de incidencias.png" alt="Gestión de incidencias" width="90%">
+</div>
 
 ### 7.5.4. Tabla de Actividades
 
