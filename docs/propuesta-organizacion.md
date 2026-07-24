@@ -167,8 +167,9 @@ Para este proceso se definen tres actores principales:
 3. **Responsable de Imágenes:** Actor técnico encargado de evaluar, construir, aprobar y publicar las imágenes que no se resuelven de forma automática.
 
 ### 7.3.3. Diagrama
-
-
+<div align="center">
+  <img src="./diagrams/Solicitud de imágenes para cursos.png" alt="Diagrama de solicitud de imágenes para cursos" width="90%">
+</div>
 
 ### 7.3.4. Tabla de Actividades
 
