@@ -1,4 +1,4 @@
-# Documento 2 — Propuesta de Organización
+﻿# Documento 2 — Propuesta de Organización
 
 **Asignatura:** Organización y Métodos  
 **Universidad:** Universidad Nacional de San Agustín de Arequipa  
@@ -141,6 +141,239 @@ El equipo consultor ha definido que esta estructura no implica que los estudiant
 | **Ejecución (Vertical)** | **Squad Hardware & Lab Ops.** | Gestiona el inventario físico, el control de accesos mediante códigos QR y el mantenimiento del hardware. |
 | **Estandarización (Horizontal)** | **Chapters Técnicos** | Liderados por profesores con experiencia industrial. Garantizan la transferencia tecnológica y el uso de buenas prácticas de desarrollo. |
 | **Auditoría (Transversal)** | **Chapter Organización y Métodos** | Asigna un Process Owner a cada squad para mapear flujos, auditar la Matriz RACI y simplificar la burocracia técnica. |
+
+---
+
+## 5. Definición de Roles y Responsabilidades
+
+**Responsable:** Jose Manuel Morocco Saico — Analista Organizacional
+
+En coherencia con las brechas identificadas durante la auditoría (Documento 1), se propone una estructura de seis roles formales que resuelve las inconsistencias detectadas: la ausencia de una autoridad institucional de alto nivel (Director), la falta de un Encargado de Laboratorio como nivel intermedio de supervisión, y la ambigüedad del rol "Jefe de Laboratorio" que aparecía en el backlog sin definición formal. Cada rol se describe con su misión, responsabilidades, nivel de autoridad y limitaciones de actuación.
+
+---
+
+### 5.1 Director de Carrera / Comité de TI
+
+**Misión:** Garantizar que la plataforma de gestión del laboratorio esté alineada con los objetivos académicos y estratégicos de la carrera, y que su operación cumpla con las normativas institucionales y legales vigentes.
+
+**Responsabilidades:**
+- Aprobar la inversión en infraestructura y las políticas institucionales de uso del laboratorio.
+- Validar las políticas de protección de datos personales de los estudiantes.
+- Autorizar la incorporación de nuevas tecnologías al stack del laboratorio.
+- Presidir la Revisión Semestral del Sistema al cierre de cada período académico.
+- Resolver conflictos de autoridad que no puedan ser gestionados en niveles inferiores.
+- Aprobar o rechazar solicitudes de excepción a las políticas de software y licencias comerciales.
+
+**Nivel de autoridad:** Máxima autoridad institucional. Sus decisiones no requieren aprobación superior dentro del proyecto.
+
+**Limitaciones:** No interviene en la operación diaria del laboratorio ni en decisiones técnicas de implementación.
+
+**Indicadores asociados:** Nivel de satisfacción docente con el laboratorio (encuesta semestral), porcentaje de cumplimiento del plan de inversión tecnológica.
+
+---
+
+### 5.2 Encargado de Laboratorio
+
+**Misión:** Supervisar la operación diaria del laboratorio físico y digital, garantizar la disponibilidad de los recursos, y actuar como punto de contacto entre la Dirección institucional y los usuarios del laboratorio (docentes y estudiantes).
+
+**Responsabilidades:**
+- Supervisar el inventario físico del laboratorio (computadoras, servidores, periféricos).
+- Gestionar el calendario de uso del laboratorio, asignando horarios a cursos y proyectos.
+- Aprobar o rechazar solicitudes de reserva especiales que se salgan del proceso estándar.
+- Coordinar con el Administrador de Plataforma la resolución de incidentes de alta prioridad (P1/P2).
+- Gestionar el proceso de onboarding de nuevos usuarios al inicio de cada semestre.
+- Coordinar el proceso de offboarding y cierre de semestre (desactivación de cuentas, depuración de datos).
+- Aprobar la incorporación de nuevas imágenes Docker al catálogo cuando el proceso escala a este nivel.
+- Generar reportes mensuales de uso del laboratorio para la Dirección.
+
+**Nivel de autoridad:** Gestión operativa general. Responde ante el Director. Tiene autoridad sobre el Administrador de Plataforma y el Personal de Soporte TI.
+
+**Limitaciones:** No puede aprobar cambios de política institucional ni comprometer presupuesto sin autorización del Director.
+
+**Indicadores asociados:** Tasa de utilización del laboratorio (horas usadas / horas disponibles), tiempo promedio de resolución de reservas conflictivas, número de incidentes P1/P2 por mes.
+
+---
+
+### 5.3 Administrador de Plataforma
+
+**Misión:** Mantener la operación técnica de la plataforma digital (Harbor, Keycloak, Kubernetes, GitLab, PostgreSQL, MinIO), garantizar la disponibilidad de los servicios, gestionar el catálogo de imágenes Docker y ejecutar los controles de seguridad definidos.
+
+**Responsabilidades:**
+- Administrar el catálogo de imágenes en Harbor: aprobar, publicar y retirar imágenes del catálogo.
+- Gestionar las cuentas de usuario en Keycloak: provisioning, deprovisioning y control de roles (RBAC).
+- Ejecutar el escaneo de vulnerabilidades con Trivy y la firma digital con Cosign para cada imagen nueva o actualizada.
+- Monitorear la disponibilidad de la infraestructura (Kubernetes, bases de datos, almacenamiento).
+- Gestionar los backups de PostgreSQL y MinIO según la política de respaldo definida.
+- Atender incidentes técnicos de nivel P2 y P3 (los P1 se escalan al Encargado de Laboratorio).
+- Ejecutar el proceso de Control de Cambios para modificaciones en el entorno de producción.
+- Generar el reporte mensual de estado del catálogo (imágenes activas, en revisión, retiradas, con CVEs pendientes).
+- Mantener actualizada la gestión de secretos (rotación de credenciales, administración de vault).
+
+**Nivel de autoridad:** Gestión técnica de la plataforma. Responde ante el Encargado de Laboratorio. Supervisa al Personal de Soporte TI en temas técnicos.
+
+**Limitaciones:** No puede aprobar cambios de política institucional ni publicar imágenes con CVE CRITICAL sin autorización del Encargado de Laboratorio.
+
+**Indicadores asociados:** Uptime de Harbor (objetivo: ≥ 99.5%), tiempo promedio de aprobación de imagen (objetivo: ≤ 48 horas), número de vulnerabilidades críticas no resueltas en el catálogo (objetivo: 0).
+
+---
+
+### 5.4 Docentes / Product Owners de Curso
+
+**Misión:** Definir los requerimientos de software para sus cursos, solicitar y validar las imágenes Docker necesarias para las actividades académicas, y coordinar con el Encargado de Laboratorio la asignación de horarios y recursos.
+
+**Responsabilidades:**
+- Solicitar las imágenes Docker requeridas para su curso al inicio de cada semestre, con un mínimo de tres semanas de anticipación.
+- Validar que las imágenes proporcionadas corresponden a los requerimientos pedagógicos del curso.
+- Reservar los horarios de laboratorio para sus clases y evaluaciones.
+- Comunicar a los estudiantes cómo acceder y utilizar las imágenes oficiales del catálogo.
+- Reportar al Encargado cualquier problema con las imágenes o recursos durante el semestre.
+- Aprobar el uso de software adicional no incluido en las imágenes estándar, con justificación académica documentada.
+
+**Nivel de autoridad:** Usuario privilegiado con capacidad de solicitud y validación. No tienen acceso a los paneles de administración de Harbor, Kubernetes ni Keycloak.
+
+**Limitaciones:** No pueden instalar ni modificar software directamente en los equipos del laboratorio. Solo pueden solicitar, validar y reportar.
+
+**Indicadores asociados:** Porcentaje de solicitudes de imagen realizadas con al menos tres semanas de anticipación, tasa de satisfacción con el catálogo de imágenes (encuesta semestral).
+
+---
+
+### 5.5 Alumnos / Desarrolladores
+
+**Misión:** Utilizar los recursos del laboratorio —físicos y digitales— de forma responsable y dentro de los procesos establecidos, para el cumplimiento de sus actividades académicas.
+
+**Responsabilidades:**
+- Reservar equipos del laboratorio a través del portal, respetando los horarios disponibles y el tiempo máximo permitido.
+- Descargar las imágenes oficiales del catálogo Harbor para usarlas en sus computadoras personales.
+- Realizar check-in y check-out al inicio y fin de cada uso de los equipos del laboratorio.
+- Reportar problemas técnicos (equipos dañados, imágenes con errores) al canal de soporte definido.
+- Cumplir con la política de uso aceptable del laboratorio: no instalar software no autorizado, no compartir credenciales, no modificar configuraciones del sistema.
+
+**Nivel de autoridad:** Usuario final. No tienen acceso a paneles de administración de ningún componente del sistema.
+
+**Limitaciones:** No pueden crear ni modificar imágenes en el catálogo oficial. Solo pueden descargar imágenes previamente aprobadas. Tienen una cuota máxima de horas de reserva semanal.
+
+**Indicadores asociados:** Tasa de uso de imágenes oficiales vs. imágenes propias (objetivo: ≥ 75%), tiempo promedio de configuración del entorno de trabajo (objetivo: ≤ 15 minutos).
+
+---
+
+### 5.6 Personal de Soporte TI
+
+**Misión:** Apoyar al Administrador de Plataforma en las tareas operativas rutinarias: mantenimiento físico de equipos, soporte de primer nivel a usuarios, y ejecución de tareas técnicas no críticas bajo supervisión directa.
+
+**Responsabilidades:**
+- Atender solicitudes de soporte de primer nivel de estudiantes y docentes: problemas de conexión, dificultades con Docker/Podman en computadoras personales, problemas de inicio de sesión.
+- Ejecutar el mantenimiento preventivo de los equipos físicos del laboratorio según el calendario establecido.
+- Ejecutar backups manuales cuando el sistema automatizado falla.
+- Registrar todas las incidencias atendidas en el sistema de ticketing.
+- Escalar al Administrador de Plataforma los incidentes que superen su nivel de resolución (N1).
+
+**Nivel de autoridad:** Soporte operativo de primer nivel. Responde ante el Administrador de Plataforma.
+
+**Limitaciones:** No tiene acceso a Harbor ni a la configuración de Kubernetes. No puede aprobar imágenes ni modificar permisos de usuarios. No puede tomar decisiones de política técnica de forma autónoma.
+
+**Indicadores asociados:** Tiempo promedio de atención de incidentes N1 (objetivo: ≤ 4 horas hábiles), porcentaje de incidentes resueltos sin escalar (objetivo: ≥ 70%).
+
+---
+
+## 6. Matrices Organizacionales
+
+**Responsable:** Jose Manuel Morocco Saico — Analista Organizacional
+
+Presentamos tres herramientas organizacionales clave que definen claramente las responsabilidades, los canales formales de comunicación y los mecanismos de coordinación entre todos los actores del laboratorio. Estas matrices son el resultado directo de las brechas identificadas en la auditoría del Documento 1, donde se determinó que el repositorio original carecía de matrices complementarias de comunicación y escalamiento, y que la Matriz RACI existente presentaba errores de asignación.
+
+---
+
+### 6.1 Matriz RACI
+
+Esta matriz asigna responsabilidades indicando quién **ejecuta (R)**, quién **aprueba (A)**, quién **debe ser consultado (C)** y quién **únicamente debe ser informado (I)**. Se corrigió la versión original del repositorio desdoblando la fila "Solicitud y Aprobación de Imágenes" en dos filas independientes, e incorporando los roles técnicos (Chapter Leads, Encargado de Laboratorio) y los procesos críticos faltantes (Gestión de Incidentes, Onboarding/Offboarding, Auditoría, Control de Cambios).
+
+**Leyenda:**
+
+| Letra | Significado |
+|:-----:|-------------|
+| **R** | Responsible — quien ejecuta la actividad |
+| **A** | Accountable — quien responde por el resultado (único por fila) |
+| **C** | Consulted — quien es consultado antes de decidir |
+| **I** | Informed — quien es informado tras la decisión o ejecución |
+
+**Matriz RACI Propuesta (Versión Corregida):**
+
+| Actividad | Director | Encargado Lab. | Admin. Plataforma | Chapter Leads Téc. | Docente | Alumno | Soporte TI |
+|-----------|:--------:|:--------------:|:-----------------:|:------------------:|:-------:|:------:|:----------:|
+| Definición de políticas de uso del lab. | A | R | C | C | C | I | I |
+| Solicitud de imagen para curso | I | I | I | I | R | R | A |
+| Aprobación de imagen Docker | I | A | R | C | C | I | I |
+| Creación de imagen personalizada | I | A | R | C | C | I | I |
+| Escaneo de vulnerabilidades (Trivy) | I | I | R/A | C | I | I | I |
+| Firma digital de imagen (Cosign) | I | I | R/A | I | I | I | I |
+| Reserva de equipos de laboratorio | I | A | I | I | C | R | I |
+| Aprobación de reservas especiales | I | R/A | I | I | C | I | I |
+| Actualización de imágenes (patch) | I | I | R/A | C | I | I | I |
+| Actualización de imágenes (major) | I | A | R | C | C | I | I |
+| Onboarding de usuarios (inicio semestre) | I | R/A | R | I | I | I | I |
+| Offboarding de usuarios (cierre semestre) | I | R/A | R | I | I | I | I |
+| Gestión de incidentes P1/P2 | I | A | R | C | I | I | C |
+| Gestión de incidentes P3/P4 | I | I | C | I | I | I | R/A |
+| Auditoría mensual del catálogo | I | A | R | C | I | I | I |
+| Control de cambios en producción | I | A | R | C | I | I | I |
+| Definición y mejora de procesos | C | A | C | C | C | I | C |
+| Gestión de licencias de software | C | A | R | C | C | I | I |
+| Revisión semestral del sistema | A | R | C | C | C | I | I |
+
+---
+
+### 6.2 Matriz de Comunicación
+
+Definimos cómo se intercambia la información oficial entre los actores, especificando el medio de comunicación autorizado, la frecuencia de las interacciones y los responsables directos de cada emisión y recepción. Esta matriz resuelve la brecha detectada en la auditoría: el repositorio original no definía ningún canal ni frecuencia formal de comunicación entre sus actores.
+
+| N.° | Información comunicada | Emisor | Receptor | Canal | Frecuencia | Responsable de emitir |
+|:---:|------------------------|--------|----------|-------|:----------:|----------------------|
+| 1 | Confirmación de reserva de equipo | Sistema (portal) | Alumno / Docente | Correo electrónico automático | Por cada reserva | Sistema |
+| 2 | Recordatorio de reserva próxima | Sistema (portal) | Alumno / Docente | Correo electrónico automático | 15 minutos antes | Sistema |
+| 3 | Notificación de imagen disponible en catálogo | Admin. de Plataforma / Sistema | Docente solicitante | Correo electrónico | Por evento (al publicar) | Admin. de Plataforma |
+| 4 | Notificación de rechazo de imagen (con justificación) | Admin. de Plataforma | Docente solicitante | Correo electrónico | Por evento (al rechazar) | Admin. de Plataforma |
+| 5 | Reporte mensual de estado del catálogo | Admin. de Plataforma | Encargado de Laboratorio | Correo + documento PDF | Mensual | Admin. de Plataforma |
+| 6 | Reporte mensual de uso del laboratorio | Encargado de Laboratorio | Director de Carrera | Documento formal / reunión | Mensual | Encargado de Laboratorio |
+| 7 | Notificación de incidente activo (P1/P2) | Personal de Soporte TI | Admin. de Plataforma + Encargado | Canal de mensajería (Teams/Slack) | Inmediata (por evento) | Personal de Soporte TI |
+| 8 | Actualización de estado de incidente | Admin. de Plataforma | Usuarios afectados | Correo electrónico | Cada 1 hora mientras esté activo | Admin. de Plataforma |
+| 9 | Cierre de incidente con causa raíz | Admin. de Plataforma | Encargado de Laboratorio | Documento Post-Incident Review | Dentro de 48 h tras el cierre | Admin. de Plataforma |
+| 10 | Convocatoria de Revisión Semestral | Encargado de Laboratorio | Director, Docentes, Admin. | Correo electrónico + agenda | Una vez por semestre | Encargado de Laboratorio |
+| 11 | Informe de Revisión Semestral | Encargado de Laboratorio | Director de Carrera | Documento formal | Una vez por semestre | Encargado de Laboratorio |
+| 12 | Notificación de inicio de semestre (onboarding) | Encargado de Laboratorio | Alumnos y Docentes nuevos | Correo electrónico con instrucciones | Inicio de cada semestre | Encargado de Laboratorio |
+| 13 | Alerta de imagen con CVE detectado post-publicación | Sistema (Trivy) / Admin. | Encargado de Laboratorio | Correo de alerta automática | Por evento (escaneo periódico) | Sistema / Admin. de Plataforma |
+| 14 | Comunicado de mantenimiento programado | Admin. de Plataforma | Todos los usuarios | Portal + correo | Con 72 horas de anticipación | Admin. de Plataforma |
+| 15 | Solicitud de imagen para nuevo semestre | Docente | Admin. de Plataforma | Formulario del portal | Al menos 3 semanas antes del inicio de clases | Docente |
+
+---
+
+### 6.3 Matriz de Escalamiento
+
+La Matriz de Escalamiento define el procedimiento para escalar problemas o incidencias según su nivel de criticidad. Resuelve la brecha identificada en la auditoría: el repositorio original no definía qué actor recibe cada tipo de problema ni en qué tiempo máximo debe recibir atención.
+
+#### Niveles de Escalamiento
+
+| Nivel | Nombre | Descripción del nivel | Receptor | Tiempo máx. de respuesta |
+|:-----:|--------|-----------------------|----------|:------------------------:|
+| **N0** | Autoservicio | El usuario resuelve el problema consultando la guía de usuario o la sección de preguntas frecuentes del portal. No requiere intervención humana. | Portal de soporte / FAQ | Inmediato |
+| **N1** | Soporte TI (primer nivel) | Problema técnico que el usuario no puede resolver por su cuenta: falla de conexión, problema con Docker en equipo personal, error de login. El Personal de Soporte TI atiende y resuelve. | Personal de Soporte TI | ≤ 4 horas hábiles |
+| **N2** | Administrador de Plataforma (segundo nivel) | Problema que requiere acceso a sistemas, configuración de plataforma o diagnóstico técnico avanzado. El Personal de Soporte TI escala al Administrador cuando no puede resolver en N1. | Administrador de Plataforma | ≤ 1 hora hábil |
+| **N3** | Encargado de Laboratorio (tercer nivel) | Incidente de alta prioridad con impacto en múltiples usuarios (P1/P2), decisión de política operativa o situación que requiere autorización institucional de nivel intermedio. | Encargado de Laboratorio | ≤ 15 minutos |
+| **N4** | Director de Carrera / Comité TI (nivel institucional) | Impacto institucional grave, brecha de seguridad de datos personales, decisión estratégica que supera la autoridad del Encargado o situación con repercusión externa. | Director de Carrera | Inmediato (guardia activa) |
+
+#### Condiciones de Escalamiento por Tipo de Incidente
+
+| Tipo de incidente | Nivel inicial | Condición de escalamiento al siguiente nivel | Tiempo máx. antes de escalar |
+|-------------------|:-------------:|----------------------------------------------|:-----------------------------:|
+| Usuario no puede iniciar sesión (un solo usuario) | N1 | Si no se resuelve en 4 horas hábiles | 4 h |
+| Harbor inaccesible para todos los usuarios | N2 | Escalar directamente a N3 si no hay resolución en 30 min | 30 min |
+| Kubernetes caído durante clase en curso | N3 | Escalar a N4 si el impacto afecta a más de un curso simultáneamente | 15 min |
+| CVE CRITICAL detectado en imagen publicada | N2 | Escalar a N3 para decisión de retirar imagen del catálogo | Inmediato |
+| Imagen con software sin licencia detectada | N3 | Escalar a N4 si involucra software propietario con riesgo legal | Inmediato |
+| Equipo físico dañado (un equipo) | N1 | Escalar a N2 si el daño afecta la clase en curso | 1 h |
+| Fallo masivo de equipos del laboratorio | N3 | Escalar a N4 si afecta evaluaciones formales | 15 min |
+| Brecha de seguridad / acceso no autorizado | N3 | Escalar a N4 de forma inmediata | Inmediato |
+| Solicitud de excepción a política de licencias | N3 | Siempre requiere aprobación de N4 para software propietario | — |
+| Conflicto de reserva entre docentes | N2 | Escalar a N3 si no se resuelve en 2 horas | 2 h |
 
 ---
 
@@ -508,248 +741,3 @@ La propuesta desarrollada responde a estas necesidades mediante la definición d
 El roadmap propuesto reconoce que la disponibilidad de tiempo, personal e infraestructura es limitada. Por ello, plantea validar el inventario y el presupuesto antes de iniciar adquisiciones, ejecutar un piloto reducido y condicionar el escalamiento a resultados medibles.
 
 Finalmente, se concluye que la implementación debe realizarse gradualmente, evaluando sus resultados antes de ampliar el alcance. La mejora continua, la capacitación, la seguridad y la gobernanza del software serán factores indispensables para asegurar la sostenibilidad de la plataforma.
-
----
-
-## 5. Definición de Roles y Responsabilidades
-
-**Responsable:** Jose Manuel Morocco Saico — Analista Organizacional
-
-En coherencia con las brechas identificadas durante la auditoría (Documento 1), se propone una estructura de seis roles formales que resuelve las inconsistencias detectadas: la ausencia de una autoridad institucional de alto nivel (Director), la falta de un Encargado de Laboratorio como nivel intermedio de supervisión, y la ambigüedad del rol "Jefe de Laboratorio" que aparecía en el backlog sin definición formal. Cada rol se describe con su misión, responsabilidades, nivel de autoridad y limitaciones de actuación.
-
----
-
-### 5.1 Director de Carrera / Comité de TI
-
-**Misión:** Garantizar que la plataforma de gestión del laboratorio esté alineada con los objetivos académicos y estratégicos de la carrera, y que su operación cumpla con las normativas institucionales y legales vigentes.
-
-**Responsabilidades:**
-- Aprobar la inversión en infraestructura y las políticas institucionales de uso del laboratorio.
-- Validar las políticas de protección de datos personales de los estudiantes.
-- Autorizar la incorporación de nuevas tecnologías al stack del laboratorio.
-- Presidir la Revisión Semestral del Sistema al cierre de cada período académico.
-- Resolver conflictos de autoridad que no puedan ser gestionados en niveles inferiores.
-- Aprobar o rechazar solicitudes de excepción a las políticas de software y licencias comerciales.
-
-**Nivel de autoridad:** Máxima autoridad institucional. Sus decisiones no requieren aprobación superior dentro del proyecto.
-
-**Limitaciones:** No interviene en la operación diaria del laboratorio ni en decisiones técnicas de implementación.
-
-**Indicadores asociados:** Nivel de satisfacción docente con el laboratorio (encuesta semestral), porcentaje de cumplimiento del plan de inversión tecnológica.
-
----
-
-### 5.2 Encargado de Laboratorio
-
-**Misión:** Supervisar la operación diaria del laboratorio físico y digital, garantizar la disponibilidad de los recursos, y actuar como punto de contacto entre la Dirección institucional y los usuarios del laboratorio (docentes y estudiantes).
-
-**Responsabilidades:**
-- Supervisar el inventario físico del laboratorio (computadoras, servidores, periféricos).
-- Gestionar el calendario de uso del laboratorio, asignando horarios a cursos y proyectos.
-- Aprobar o rechazar solicitudes de reserva especiales que se salgan del proceso estándar.
-- Coordinar con el Administrador de Plataforma la resolución de incidentes de alta prioridad (P1/P2).
-- Gestionar el proceso de onboarding de nuevos usuarios al inicio de cada semestre.
-- Coordinar el proceso de offboarding y cierre de semestre (desactivación de cuentas, depuración de datos).
-- Aprobar la incorporación de nuevas imágenes Docker al catálogo cuando el proceso escala a este nivel.
-- Generar reportes mensuales de uso del laboratorio para la Dirección.
-
-**Nivel de autoridad:** Gestión operativa general. Responde ante el Director. Tiene autoridad sobre el Administrador de Plataforma y el Personal de Soporte TI.
-
-**Limitaciones:** No puede aprobar cambios de política institucional ni comprometer presupuesto sin autorización del Director.
-
-**Indicadores asociados:** Tasa de utilización del laboratorio (horas usadas / horas disponibles), tiempo promedio de resolución de reservas conflictivas, número de incidentes P1/P2 por mes.
-
----
-
-### 5.3 Administrador de Plataforma
-
-**Misión:** Mantener la operación técnica de la plataforma digital (Harbor, Keycloak, Kubernetes, GitLab, PostgreSQL, MinIO), garantizar la disponibilidad de los servicios, gestionar el catálogo de imágenes Docker y ejecutar los controles de seguridad definidos.
-
-**Responsabilidades:**
-- Administrar el catálogo de imágenes en Harbor: aprobar, publicar y retirar imágenes del catálogo.
-- Gestionar las cuentas de usuario en Keycloak: provisioning, deprovisioning y control de roles (RBAC).
-- Ejecutar el escaneo de vulnerabilidades con Trivy y la firma digital con Cosign para cada imagen nueva o actualizada.
-- Monitorear la disponibilidad de la infraestructura (Kubernetes, bases de datos, almacenamiento).
-- Gestionar los backups de PostgreSQL y MinIO según la política de respaldo definida.
-- Atender incidentes técnicos de nivel P2 y P3 (los P1 se escalan al Encargado de Laboratorio).
-- Ejecutar el proceso de Control de Cambios para modificaciones en el entorno de producción.
-- Generar el reporte mensual de estado del catálogo (imágenes activas, en revisión, retiradas, con CVEs pendientes).
-- Mantener actualizada la gestión de secretos (rotación de credenciales, administración de vault).
-
-**Nivel de autoridad:** Gestión técnica de la plataforma. Responde ante el Encargado de Laboratorio. Supervisa al Personal de Soporte TI en temas técnicos.
-
-**Limitaciones:** No puede aprobar cambios de política institucional ni publicar imágenes con CVE CRITICAL sin autorización del Encargado de Laboratorio.
-
-**Indicadores asociados:** Uptime de Harbor (objetivo: ≥ 99.5%), tiempo promedio de aprobación de imagen (objetivo: ≤ 48 horas), número de vulnerabilidades críticas no resueltas en el catálogo (objetivo: 0).
-
----
-
-### 5.4 Docentes / Product Owners de Curso
-
-**Misión:** Definir los requerimientos de software para sus cursos, solicitar y validar las imágenes Docker necesarias para las actividades académicas, y coordinar con el Encargado de Laboratorio la asignación de horarios y recursos.
-
-**Responsabilidades:**
-- Solicitar las imágenes Docker requeridas para su curso al inicio de cada semestre, con un mínimo de tres semanas de anticipación.
-- Validar que las imágenes proporcionadas corresponden a los requerimientos pedagógicos del curso.
-- Reservar los horarios de laboratorio para sus clases y evaluaciones.
-- Comunicar a los estudiantes cómo acceder y utilizar las imágenes oficiales del catálogo.
-- Reportar al Encargado cualquier problema con las imágenes o recursos durante el semestre.
-- Aprobar el uso de software adicional no incluido en las imágenes estándar, con justificación académica documentada.
-
-**Nivel de autoridad:** Usuario privilegiado con capacidad de solicitud y validación. No tienen acceso a los paneles de administración de Harbor, Kubernetes ni Keycloak.
-
-**Limitaciones:** No pueden instalar ni modificar software directamente en los equipos del laboratorio. Solo pueden solicitar, validar y reportar.
-
-**Indicadores asociados:** Porcentaje de solicitudes de imagen realizadas con al menos tres semanas de anticipación, tasa de satisfacción con el catálogo de imágenes (encuesta semestral).
-
----
-
-### 5.5 Alumnos / Desarrolladores
-
-**Misión:** Utilizar los recursos del laboratorio —físicos y digitales— de forma responsable y dentro de los procesos establecidos, para el cumplimiento de sus actividades académicas.
-
-**Responsabilidades:**
-- Reservar equipos del laboratorio a través del portal, respetando los horarios disponibles y el tiempo máximo permitido.
-- Descargar las imágenes oficiales del catálogo Harbor para usarlas en sus computadoras personales.
-- Realizar check-in y check-out al inicio y fin de cada uso de los equipos del laboratorio.
-- Reportar problemas técnicos (equipos dañados, imágenes con errores) al canal de soporte definido.
-- Cumplir con la política de uso aceptable del laboratorio: no instalar software no autorizado, no compartir credenciales, no modificar configuraciones del sistema.
-
-**Nivel de autoridad:** Usuario final. No tienen acceso a paneles de administración de ningún componente del sistema.
-
-**Limitaciones:** No pueden crear ni modificar imágenes en el catálogo oficial. Solo pueden descargar imágenes previamente aprobadas. Tienen una cuota máxima de horas de reserva semanal.
-
-**Indicadores asociados:** Tasa de uso de imágenes oficiales vs. imágenes propias (objetivo: ≥ 75%), tiempo promedio de configuración del entorno de trabajo (objetivo: ≤ 15 minutos).
-
----
-
-### 5.6 Personal de Soporte TI
-
-**Misión:** Apoyar al Administrador de Plataforma en las tareas operativas rutinarias: mantenimiento físico de equipos, soporte de primer nivel a usuarios, y ejecución de tareas técnicas no críticas bajo supervisión directa.
-
-**Responsabilidades:**
-- Atender solicitudes de soporte de primer nivel de estudiantes y docentes: problemas de conexión, dificultades con Docker/Podman en computadoras personales, problemas de inicio de sesión.
-- Ejecutar el mantenimiento preventivo de los equipos físicos del laboratorio según el calendario establecido.
-- Ejecutar backups manuales cuando el sistema automatizado falla.
-- Registrar todas las incidencias atendidas en el sistema de ticketing.
-- Escalar al Administrador de Plataforma los incidentes que superen su nivel de resolución (N1).
-
-**Nivel de autoridad:** Soporte operativo de primer nivel. Responde ante el Administrador de Plataforma.
-
-**Limitaciones:** No tiene acceso a Harbor ni a la configuración de Kubernetes. No puede aprobar imágenes ni modificar permisos de usuarios. No puede tomar decisiones de política técnica de forma autónoma.
-
-**Indicadores asociados:** Tiempo promedio de atención de incidentes N1 (objetivo: ≤ 4 horas hábiles), porcentaje de incidentes resueltos sin escalar (objetivo: ≥ 70%).
-
----
-
-## 6. Matrices Organizacionales
-
-**Responsable:** Jose Manuel Morocco Saico — Analista Organizacional
-
-Presentamos tres herramientas organizacionales clave que definen claramente las responsabilidades, los canales formales de comunicación y los mecanismos de coordinación entre todos los actores del laboratorio. Estas matrices son el resultado directo de las brechas identificadas en la auditoría del Documento 1, donde se determinó que el repositorio original carecía de matrices complementarias de comunicación y escalamiento, y que la Matriz RACI existente presentaba errores de asignación.
-
----
-
-### 6.1 Matriz RACI
-
-Esta matriz asigna responsabilidades indicando quién **ejecuta (R)**, quién **aprueba (A)**, quién **debe ser consultado (C)** y quién **únicamente debe ser informado (I)**. Se corrigió la versión original del repositorio desdoblando la fila "Solicitud y Aprobación de Imágenes" en dos filas independientes, e incorporando los roles técnicos (Chapter Leads, Encargado de Laboratorio) y los procesos críticos faltantes (Gestión de Incidentes, Onboarding/Offboarding, Auditoría, Control de Cambios).
-
-**Leyenda:**
-
-| Letra | Significado |
-|:-----:|-------------|
-| **R** | Responsible — quien ejecuta la actividad |
-| **A** | Accountable — quien responde por el resultado (único por fila) |
-| **C** | Consulted — quien es consultado antes de decidir |
-| **I** | Informed — quien es informado tras la decisión o ejecución |
-
-**Matriz RACI Propuesta (Versión Corregida):**
-
-| Actividad | Director | Encargado Lab. | Admin. Plataforma | Chapter Leads Téc. | Docente | Alumno | Soporte TI |
-|-----------|:--------:|:--------------:|:-----------------:|:------------------:|:-------:|:------:|:----------:|
-| Definición de políticas de uso del lab. | A | R | C | C | C | I | I |
-| Solicitud de imagen para curso | I | I | I | I | R | R | A |
-| Aprobación de imagen Docker | I | A | R | C | C | I | I |
-| Creación de imagen personalizada | I | A | R | C | C | I | I |
-| Escaneo de vulnerabilidades (Trivy) | I | I | R/A | C | I | I | I |
-| Firma digital de imagen (Cosign) | I | I | R/A | I | I | I | I |
-| Reserva de equipos de laboratorio | I | A | I | I | C | R | I |
-| Aprobación de reservas especiales | I | R/A | I | I | C | I | I |
-| Actualización de imágenes (patch) | I | I | R/A | C | I | I | I |
-| Actualización de imágenes (major) | I | A | R | C | C | I | I |
-| Onboarding de usuarios (inicio semestre) | I | R/A | R | I | I | I | I |
-| Offboarding de usuarios (cierre semestre) | I | R/A | R | I | I | I | I |
-| Gestión de incidentes P1/P2 | I | A | R | C | I | I | C |
-| Gestión de incidentes P3/P4 | I | I | C | I | I | I | R/A |
-| Auditoría mensual del catálogo | I | A | R | C | I | I | I |
-| Control de cambios en producción | I | A | R | C | I | I | I |
-| Definición y mejora de procesos | C | A | C | C | C | I | C |
-| Gestión de licencias de software | C | A | R | C | C | I | I |
-| Revisión semestral del sistema | A | R | C | C | C | I | I |
-
----
-
-### 6.2 Matriz de Comunicación
-
-Definimos cómo se intercambia la información oficial entre los actores, especificando el medio de comunicación autorizado, la frecuencia de las interacciones y los responsables directos de cada emisión y recepción. Esta matriz resuelve la brecha detectada en la auditoría: el repositorio original no definía ningún canal ni frecuencia formal de comunicación entre sus actores.
-
-| N.° | Información comunicada | Emisor | Receptor | Canal | Frecuencia | Responsable de emitir |
-|:---:|------------------------|--------|----------|-------|:----------:|----------------------|
-| 1 | Confirmación de reserva de equipo | Sistema (portal) | Alumno / Docente | Correo electrónico automático | Por cada reserva | Sistema |
-| 2 | Recordatorio de reserva próxima | Sistema (portal) | Alumno / Docente | Correo electrónico automático | 15 minutos antes | Sistema |
-| 3 | Notificación de imagen disponible en catálogo | Admin. de Plataforma / Sistema | Docente solicitante | Correo electrónico | Por evento (al publicar) | Admin. de Plataforma |
-| 4 | Notificación de rechazo de imagen (con justificación) | Admin. de Plataforma | Docente solicitante | Correo electrónico | Por evento (al rechazar) | Admin. de Plataforma |
-| 5 | Reporte mensual de estado del catálogo | Admin. de Plataforma | Encargado de Laboratorio | Correo + documento PDF | Mensual | Admin. de Plataforma |
-| 6 | Reporte mensual de uso del laboratorio | Encargado de Laboratorio | Director de Carrera | Documento formal / reunión | Mensual | Encargado de Laboratorio |
-| 7 | Notificación de incidente activo (P1/P2) | Personal de Soporte TI | Admin. de Plataforma + Encargado | Canal de mensajería (Teams/Slack) | Inmediata (por evento) | Personal de Soporte TI |
-| 8 | Actualización de estado de incidente | Admin. de Plataforma | Usuarios afectados | Correo electrónico | Cada 1 hora mientras esté activo | Admin. de Plataforma |
-| 9 | Cierre de incidente con causa raíz | Admin. de Plataforma | Encargado de Laboratorio | Documento Post-Incident Review | Dentro de 48 h tras el cierre | Admin. de Plataforma |
-| 10 | Convocatoria de Revisión Semestral | Encargado de Laboratorio | Director, Docentes, Admin. | Correo electrónico + agenda | Una vez por semestre | Encargado de Laboratorio |
-| 11 | Informe de Revisión Semestral | Encargado de Laboratorio | Director de Carrera | Documento formal | Una vez por semestre | Encargado de Laboratorio |
-| 12 | Notificación de inicio de semestre (onboarding) | Encargado de Laboratorio | Alumnos y Docentes nuevos | Correo electrónico con instrucciones | Inicio de cada semestre | Encargado de Laboratorio |
-| 13 | Alerta de imagen con CVE detectado post-publicación | Sistema (Trivy) / Admin. | Encargado de Laboratorio | Correo de alerta automática | Por evento (escaneo periódico) | Sistema / Admin. de Plataforma |
-| 14 | Comunicado de mantenimiento programado | Admin. de Plataforma | Todos los usuarios | Portal + correo | Con 72 horas de anticipación | Admin. de Plataforma |
-| 15 | Solicitud de imagen para nuevo semestre | Docente | Admin. de Plataforma | Formulario del portal | Al menos 3 semanas antes del inicio de clases | Docente |
-
----
-
-### 6.3 Matriz de Escalamiento
-
-La Matriz de Escalamiento define el procedimiento para escalar problemas o incidencias según su nivel de criticidad. Resuelve la brecha identificada en la auditoría: el repositorio original no definía qué actor recibe cada tipo de problema ni en qué tiempo máximo debe recibir atención.
-
-#### Niveles de Escalamiento
-
-| Nivel | Nombre | Descripción del nivel | Receptor | Tiempo máx. de respuesta |
-|:-----:|--------|-----------------------|----------|:------------------------:|
-| **N0** | Autoservicio | El usuario resuelve el problema consultando la guía de usuario o la sección de preguntas frecuentes del portal. No requiere intervención humana. | Portal de soporte / FAQ | Inmediato |
-| **N1** | Soporte TI (primer nivel) | Problema técnico que el usuario no puede resolver por su cuenta: falla de conexión, problema con Docker en equipo personal, error de login. El Personal de Soporte TI atiende y resuelve. | Personal de Soporte TI | ≤ 4 horas hábiles |
-| **N2** | Administrador de Plataforma (segundo nivel) | Problema que requiere acceso a sistemas, configuración de plataforma o diagnóstico técnico avanzado. El Personal de Soporte TI escala al Administrador cuando no puede resolver en N1. | Administrador de Plataforma | ≤ 1 hora hábil |
-| **N3** | Encargado de Laboratorio (tercer nivel) | Incidente de alta prioridad con impacto en múltiples usuarios (P1/P2), decisión de política operativa o situación que requiere autorización institucional de nivel intermedio. | Encargado de Laboratorio | ≤ 15 minutos |
-| **N4** | Director de Carrera / Comité TI (nivel institucional) | Impacto institucional grave, brecha de seguridad de datos personales, decisión estratégica que supera la autoridad del Encargado o situación con repercusión externa. | Director de Carrera | Inmediato (guardia activa) |
-
-#### Condiciones de Escalamiento por Tipo de Incidente
-
-| Tipo de incidente | Nivel inicial | Condición de escalamiento al siguiente nivel | Tiempo máx. antes de escalar |
-|-------------------|:-------------:|----------------------------------------------|:-----------------------------:|
-| Usuario no puede iniciar sesión (un solo usuario) | N1 | Si no se resuelve en 4 horas hábiles | 4 h |
-| Harbor inaccesible para todos los usuarios | N2 | Escalar directamente a N3 si no hay resolución en 30 min | 30 min |
-| Kubernetes caído durante clase en curso | N3 | Escalar a N4 si el impacto afecta a más de un curso simultáneamente | 15 min |
-| CVE CRITICAL detectado en imagen publicada | N2 | Escalar a N3 para decisión de retirar imagen del catálogo | Inmediato |
-| Imagen con software sin licencia detectada | N3 | Escalar a N4 si involucra software propietario con riesgo legal | Inmediato |
-| Equipo físico dañado (un equipo) | N1 | Escalar a N2 si el daño afecta la clase en curso | 1 h |
-| Fallo masivo de equipos del laboratorio | N3 | Escalar a N4 si afecta evaluaciones formales | 15 min |
-| Brecha de seguridad / acceso no autorizado | N3 | Escalar a N4 de forma inmediata | Inmediato |
-| Solicitud de excepción a política de licencias | N3 | Siempre requiere aprobación de N4 para software propietario | — |
-| Conflicto de reserva entre docentes | N2 | Escalar a N3 si no se resuelve en 2 horas | 2 h |
-
----
-
-*Secciones 5 y 6 elaboradas por Jose Manuel Morocco Saico — Analista Organizacional.*
-*Las matrices son coherentes con los hallazgos del Informe de Revisión y Comentarios (Documento 1, sección 6).*
-
-
-
-
-
-
-
