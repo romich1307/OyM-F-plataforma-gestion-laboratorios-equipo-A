@@ -329,3 +329,150 @@ Los archivos revisados por cada integrante fueron los siguientes:
 - Modelar el proceso de forma gráfica bajo el estándar BPMN 2.0.
 - Añadir un evento intermedio de tiempo ("Timer Event") en el BPMN que libere el equipo automáticamente si no se registra el Check-in en un tiempo prudencial.
 
+---
+
+## 6. Comentarios del Integrante 4 — José Manuel Morocco Saico
+
+### 6.1 `docs/organizacion-agil.md`
+
+#### ¿Qué está bien?
+
+- La adopción del Modelo Spotify es conceptualmente acertada para equilibrar autonomía con estándares técnicos comunes.
+- La evolución de 4 Squads en la Fase 1 a 5 en la Fase 2 refleja un diseño incremental escalable.
+
+#### ¿Qué está mal o puede mejorarse?
+
+- Un equipo de 4 personas no puede sostener 4 Squads simultáneos, rompiendo la multidisciplinariedad requerida por el modelo.
+- Los Squads carecen de una misión clara y no hay coordinación inter-Squad definida, lo que generará silos de trabajo.
+
+#### ¿Qué falta?
+
+- Falta un organigrama visual que aclare las líneas de autoridad y defina el rol del Tribe Lead.
+- Faltan los Guilds clave (Seguridad y Documentación) que se mencionan en el documento pero se omiten en la estructura formal.
+
+#### ¿Qué proponemos?
+
+- Crear una "Implementación reducida" con roles cruzados y designar al docente como Tribe Lead.
+- Agregar fichas estandarizadas por Squad y formalizar los Guilds en la estructura organizacional.
+
+---
+
+### 6.2 `docs/plan-dedicacion.md`
+
+#### ¿Qué está bien?
+
+- Hacer explícita la cantidad de horas esperadas y el ritmo de reuniones asegura mentoría continua y transparencia en la carga de trabajo.
+- Reconocer que la Fase 2 requiere un mayor rango de horas evidencia una planificación con conciencia del esfuerzo real.
+
+#### ¿Qué está mal o puede mejorarse?
+
+- Asignar 25 horas semanales a un solo curso contradice el principio ágil de trabajo sostenible.
+- No se menciona un mecanismo para medir la velocidad real (velocity) del equipo y ajustar el alcance dinámicamente.
+
+#### ¿Qué falta?
+
+- Falta un Capacity Planning real que considere la carga de otros cursos y las semanas de exámenes.
+- Falta establecer el timeboxing exacto (duración máxima) para las ceremonias ágiles clave.
+
+#### ¿Qué proponemos?
+
+- Realizar un Capacity Planning para reducir la dedicación a un rango sostenible de 10–15 horas semanales.
+- Incluir una tabla con el tiempo máximo estandarizado para cada ceremonia ágil (Daily, Sprint Planning, Retrospectiva).
+
+---
+
+### 6.3 `backlog/inicial.md`
+
+#### ¿Qué está bien?
+
+- Las 6 Épicas cubren el sistema de manera integral y la priorización MoSCoW está bien aplicada.
+- La evaluación para estructurar el Chapter de Organización es sólida y utiliza formatos estándar.
+
+#### ¿Qué está mal o puede mejorarse?
+
+- Las Épicas 2 a 6 solo listan tareas técnicas sin enfoque de valor para el usuario, y los criterios de aceptación son muy generales.
+- Ningún ítem tiene estimación en story points y se menciona un rol inexistente: "Jefe de Laboratorio".
+
+#### ¿Qué falta?
+
+- Faltan estimaciones ágiles, un Definition of Done (DoD) y un Definition of Ready (DoR) formales.
+- Faltan épicas dedicadas exclusivamente a Seguridad y Gobernanza de imágenes.
+
+#### ¿Qué proponemos?
+
+- Transformar las tareas técnicas en historias de usuario con criterios de aceptación propios, usando Planning Poker para las estimaciones.
+- Separar infraestructura en un "Backlog Técnico" y crear épicas específicas de Seguridad y Gobernanza.
+
+---
+
+### 6.4 Análisis de la Matriz RACI — `docs/procesos-laboratorio.md`
+
+#### ¿Qué está bien?
+
+- El uso de la metodología RACI refleja correctamente la autoridad formal del Administrador de laboratorio.
+- Asignar R/A al Responsable de Imágenes en su creación es correcto por su propiedad técnica sobre ese proceso.
+
+#### ¿Qué está mal o puede mejorarse?
+
+- Agrupar "Solicitud" y "Aprobación" en una sola fila destruye la claridad: solicitar no es lo mismo que aprobar.
+- El Chapter de Organización figura como Consulted (C) sin ningún mecanismo definido de consulta.
+- El Docente está subutilizado (solo Consulted) cuando en realidad es él quien origina las solicitudes de nuevas imágenes.
+
+#### ¿Qué falta?
+
+- Faltan columnas para "Chapter Leads Técnicos" y "Encargado de Laboratorio", actores activos pero ausentes en la matriz.
+- Faltan procesos críticos no mapeados: Gestión de Incidentes, Auditoría del catálogo y Onboarding/Offboarding de usuarios.
+- Faltan las matrices complementarias: Matriz de Comunicación y Matriz de Escalamiento (niveles N0 a N4).
+
+#### ¿Qué proponemos?
+
+- Desdoblar "Solicitud y Aprobación de Imágenes" en dos filas independientes con los actores correctos en cada una.
+- Presentar una Matriz RACI corregida con 19 actividades y 7 roles, incluyendo todos los procesos y actores faltantes.
+- Crear documentos formales de Matriz de Comunicación y Matriz de Escalamiento como entregables del Documento 2.
+
+---
+
+## 7. Conclusiones generales
+
+### 7.1 Fortalezas identificadas
+
+La propuesta del repositorio demuestra una visión tecnológica sólida y orientada hacia estándares modernos. Entre sus principales fortalezas se destacan:
+
+- **Stack tecnológico coherente:** El uso íntegro de herramientas open source (GitLab, Harbor, Keycloak, Kubernetes, PostgreSQL, MinIO) es adecuado para una institución educativa con presupuesto limitado y representa un entorno de aprendizaje con valor industrial.
+- **Modelo híbrido On-Premise + Nube:** La arquitectura aprovecha la infraestructura existente para la carga regular y reserva la nube para picos, lo cual es técnicamente acertado.
+- **Estandarización de entornos:** El principio de "mismo entorno dentro y fuera del laboratorio" resuelve directamente el problema pedagógico más crítico identificado en el diagnóstico.
+- **Prácticas DevSecOps:** La incorporación de Trivy para escaneo de vulnerabilidades y Cosign para firma de imágenes refleja una propuesta con conciencia de seguridad desde el diseño.
+- **Estructura de gobernanza inicial:** La existencia de una Matriz RACI, aunque incompleta, y un backlog inicial con priorización MoSCoW evidencian un intento ordenado de estructurar el trabajo.
+- **Modelo organizacional ágil:** La adopción del Modelo Spotify como referencia es conceptualmente acertada para un entorno donde conviven autonomía técnica y estándares comunes.
+
+---
+
+### 7.2 Debilidades identificadas
+
+La auditoría reveló brechas significativas entre la propuesta actual y los estándares de O&M aplicados. Las debilidades más críticas son:
+
+- **Ausencia de indicadores y metas SMART:** Los objetivos están redactados en términos cualitativos sin métricas, valores iniciales ni responsables que permitan verificar su cumplimiento.
+- **Documentación incompleta y fragmentada:** Varios archivos mencionados en el README no existen en el repositorio (`costos.md`, `roles-habilidades.md`, `CODE_OF_CONDUCT.md`). Otros documentos están incompletos o son versiones obsoletas (`procesos-laboratorio.md` en la subcarpeta `procesos/`).
+- **Inviabilidad operativa del modelo organizacional:** Un equipo de 4 personas no puede sostener simultáneamente 4 Squads autónomos con roles diferenciados. La propuesta organizacional no está ajustada a la capacidad real del equipo.
+- **Ausencia de gestión de riesgos:** Ningún documento incluye una matriz de riesgos académica que contemple la rotación de estudiantes, los períodos de examen o la continuidad entre cohortes.
+- **Falta de SLAs y criterios de aceptación por fase:** Las fases de implementación carecen de entregables medibles, hitos de control (gates) y criterios de salida verificables.
+- **Procesos BPMN sin representación gráfica:** Todos los procesos modelados son descripciones textuales que no cumplen con el estándar visual formal de BPMN 2.0.
+- **Matriz RACI incompleta:** La matriz original omite actores clave (Encargado de Laboratorio, Chapter Leads), agrupa actividades distintas en una sola fila y no cubre procesos críticos como la Gestión de Incidentes.
+- **Sin plan de contingencia ni observabilidad:** La arquitectura no define respaldo, recuperación ante desastres ni herramientas de monitoreo para garantizar la continuidad del servicio durante clases.
+
+---
+
+### 7.3 Recomendaciones generales
+
+Con base en los hallazgos de la auditoría, el equipo consultor formula las siguientes recomendaciones prioritarias para mejorar la propuesta:
+
+1. **Completar y sanear la documentación base:** Eliminar referencias a archivos inexistentes, corregir problemas de codificación de caracteres y establecer `README.md` como la única fuente oficial del proyecto.
+2. **Convertir objetivos en metas SMART:** Cada objetivo debe incluir un indicador medible, un valor inicial, una meta, un responsable y un medio de verificación.
+3. **Ajustar el modelo organizacional a la capacidad real:** Diseñar una estructura reducida con roles cruzados que sea sostenible para un equipo de 4 personas y alinearla con el calendario académico semestral.
+4. **Implementar SLAs y criterios de salida por fase:** Cada fase de implementación debe tener entregables verificables y una condición medible de salida antes de avanzar a la siguiente.
+5. **Desarrollar los diagramas BPMN 2.0 de forma gráfica:** Todos los procesos deben ser modelados en una herramienta que genere diagramas con Pools, Lanes y compuertas lógicas formales.
+6. **Crear la Matriz RACI corregida y las matrices complementarias:** Ampliar la RACI a 19 actividades y 7 roles, y desarrollar una Matriz de Comunicación y una Matriz de Escalamiento (N0–N4) como entregables formales.
+7. **Incorporar gestión de riesgos académica:** Definir una matriz de riesgos que contemple la rotación de estudiantes, los períodos de examen, la disponibilidad docente y la continuidad entre cohortes.
+8. **Definir una política de gobernanza de imágenes Docker:** Establecer versionado inmutable, política de retención, re-escaneo periódico y un SLA formal para el proceso de aprobación de nuevas imágenes.
+9. **Establecer observabilidad desde la Fase 0:** Implementar Prometheus + Grafana desde el inicio del proyecto para monitorear disponibilidad, rendimiento y detección temprana de incidentes.
+10. **Validar la capacidad de infraestructura:** Ejecutar pruebas de carga que simulen el "efecto campana" (acceso simultáneo de un aula completa) antes de comprometer la arquitectura propuesta.
