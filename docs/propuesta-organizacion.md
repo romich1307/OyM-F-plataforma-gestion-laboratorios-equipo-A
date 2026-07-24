@@ -323,6 +323,7 @@ Para este proceso se definen tres actores principales:
 ---
 
 ## 8. Indicadores de gestión (KPIs)
+**Responsable:** León Hatches Curo — Analista BPMN
 
 Para evaluar el desempeño de la plataforma y medir la eficiencia de los procesos diseñados (BPMN), se proponen los siguientes Indicadores Clave de Rendimiento (KPIs). Estos permitirán tomar decisiones basadas en datos y garantizar la mejora continua del laboratorio.
 
