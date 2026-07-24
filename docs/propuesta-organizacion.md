@@ -122,6 +122,36 @@ Para dimensionar el impacto de estos problemas en la realidad académica de la f
 
 ---
 
+## 7. Procesos organizacionales
+**Responsable:** León Hatches Curo - Analista BPMN
+
+En esta sección, se documentan los principales procesos de gestión del laboratorio utilizando BPMN 2.0, definiendo sus actores, entradas, salidas, actividades y responsables.
+
+### 7.1. Matriz General de Procesos
+
+En esta tabla se resumen los 4 macroprocesos diseñados para el ciclo de vida operativo del laboratorio:
+
+| Proceso Principal | Entradas (Inputs) | Salidas (Outputs) | Responsable (Owner) |
+| :---: | :---: | :---: | :---: |
+| Solicitud de imágenes para cursos | Formulario de solicitud del docente (requerimientos de software, versión y curso). | Imagen Docker oficial escaneada, aprobada y publicada en el catálogo; o notificación de rechazo. | Responsable de Imágenes |
+| Reserva de laboratorios | Solicitud de asignación por horario (reserva digital en portal). | Reserva confirmada y validada físicamente (Check-in QR), o cancelación por inasistencia. | Administrador de Laboratorio |
+| Gestión de incidencias | Reporte de fallo o ticket de soporte (hardware dañado, error de software o red). | Incidencia resuelta/cerrada o escalada a mantenimiento especializado. | Administrador / Soporte Técnico |
+| Onboarding y Offboarding | Nómina de estudiantes matriculados (inicio de semestre) y calendario académico (fin de semestre). | Cuentas y accesos creados en la plataforma (Onboarding) y revocación de permisos (Offboarding). | Administrador de Laboratorio |
+
+### 7.2. Actores de los Procesos
+
+Para la correcta lectura de los diagramas BPMN posteriores, se han definido los siguientes actores institucionales y sistémicos que participarán en los distintos carriles (Lanes) de los flujos:
+
+| Actor del Proceso | Tipo | Descripción y Participación en los Flujos |
+| :---- | :---- | :---- |
+| Docente (Product Owner) | Humano | Usuario solicitante. Detona el proceso 7.1 al solicitar requerimientos específicos para su curso y aprueba el uso de recursos tecnológicos. |
+| Estudiante (Desarrollador) | Humano | Usuario final del laboratorio. Participa activamente en el proceso 7.2 realizando la reserva y el check-in, y consume las imágenes de contenedores. |
+| Administrador de Laboratorio | Humano | Responsable de la operatividad física y digital. Gestiona la infraestructura, resuelve incidencias y controla el alta y baja de usuarios (Onboarding/Offboarding). |
+| Responsable de Imágenes | Humano | Gestor técnico del catálogo de contenedores (Docker). Evalúa, construye y aprueba manualmente las imágenes que requieren personalización. |
+| Sistema Automatizado (Plataforma) | Sistema | Conjunto de herramientas tecnológicas (Harbor, Keycloak, Trivy) encargado de ejecutar tareas automáticas (service tasks), como escaneo de vulnerabilidades, envío de correos y entrega directa de imágenes. |
+
+---
+
 ## 4. Propuesta de estructura organizacional (TO-BE)
 **Responsable:** Romina Camargo Hilachoque — Product Owner
 
