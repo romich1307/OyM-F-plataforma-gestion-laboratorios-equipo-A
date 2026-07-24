@@ -166,6 +166,21 @@ GitLab, Harbor, Kubernetes y Keycloak disponen de ediciones de código abierto, 
 
 Los rangos no deben sumarse automáticamente: el escenario final depende de la infraestructura reutilizable, el número de nodos, los meses de servicio en nube y las licencias ya cubiertas por convenios institucionales.
 
+### 10.4 Control de viabilidad y aprobación presupuestaria
+
+Antes de autorizar una adquisición o avanzar hacia el escalamiento, el comité de gobierno deberá revisar como mínimo:
+
+| Control | Evidencia requerida | Responsable | Aprobador |
+|---|---|---|---|
+| Inventario reutilizable | Relación de servidores, red, almacenamiento y licencias disponibles | Administrador de Plataforma | Encargado de Laboratorio |
+| Dimensionamiento | Prueba de carga con usuarios concurrentes y consumo medido | Equipo técnico | Comité de Gobierno |
+| Comparación económica | Al menos tres cotizaciones o precios públicos comparables | Encargado de Laboratorio | Dirección / Comité de TI |
+| Costo total de propiedad | CAPEX, OPEX, mantenimiento, energía y renovación a tres años | Product Owner | Dirección / Comité de TI |
+| Disponibilidad del equipo | Horas asignadas de docentes, estudiantes y soporte | Scrum Master | Product Owner |
+| Resultado del piloto | KPIs, incidentes, satisfacción, costos reales y lecciones aprendidas | Equipo consultor | Comité de Gobierno |
+
+Las estimaciones deberán actualizarse cuando una cotización tenga más de 90 días, cambie el alcance o la prueba de capacidad muestre una variación superior al 20 %. El escalamiento solo será viable si cuenta con presupuesto aprobado, personal operativo asignado y cumplimiento de los criterios de salida del piloto.
+
 ## 11. Recomendaciones de implementación
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
