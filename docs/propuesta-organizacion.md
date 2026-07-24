@@ -30,3 +30,16 @@ El trabajo se inició con la distribución de los archivos entre los cuatro inte
 Posteriormente, los hallazgos individuales fueron reunidos para elaborar un diagnóstico de la situación actual o AS-IS. Este diagnóstico sirvió como base para construir la propuesta de situación futura o TO-BE, conformada por una estructura organizacional, roles, matrices de responsabilidad, procesos, indicadores y mecanismos de gobernanza.
 
 Finalmente, el equipo revisó la coherencia entre los problemas identificados y las soluciones propuestas. Las actividades fueron coordinadas mediante principios de Scrum y un tablero Kanban simplificado para controlar el avance y la revisión de los entregables.
+
+### 2.1 Organización del equipo consultor
+
+Para desarrollar la consultoría se asignaron roles que permitieron distribuir las responsabilidades de acuerdo con los componentes principales del trabajo.
+
+| Integrante | Rol | Responsabilidad principal |
+|---|---|---|
+| Paola Adamari Mayta Quispe | Scrum Master | Coordinar las actividades, organizar el cronograma y el tablero Kanban, redactar la metodología, revisar la coherencia del documento y elaborar las recomendaciones y conclusiones finales. |
+| Romina Giuliana Camargo Hilachoque | Product Owner | Elaborar el diagnóstico AS-IS, definir la propuesta TO-BE y comprobar que las mejoras respondan a las necesidades del laboratorio. |
+| José León Enrique Hatches Curo | Analista BPMN | Diseñar y documentar los procesos, identificando actividades, responsables, entradas, salidas y decisiones. |
+| José Manuel Morocco Saico | Analista Organizacional | Definir la estructura organizacional, los roles, la matriz RACI, los mecanismos de comunicación, el escalamiento, los indicadores y la gobernanza. |
+
+Aunque cada integrante asumió una responsabilidad principal, la revisión final se realizó de manera conjunta para evitar contradicciones entre los procesos, roles y recomendaciones.
