@@ -112,3 +112,25 @@ El inicio de cada etapa depende de la aprobación de los entregables de la etapa
 |  |  |  | Procesos y matrices |
 
 El Scrum Master actualiza el tablero después de cada reunión. Una actividad solo pasa a “Terminado” cuando cuenta con evidencia, responsable identificado y revisión de al menos otro integrante.
+
+## 10. Recomendaciones de implementación
+
+**Responsable:** Paola Adamari Mayta Quispe — Scrum Master
+
+Se recomienda implementar la propuesta de manera progresiva, comenzando con un piloto controlado en un laboratorio y un número reducido de cursos. Antes de incorporar la plataforma, deberán aprobarse formalmente los roles, responsabilidades, presupuesto y procesos operativos.
+
+Asimismo, se recomienda:
+
+1. Designar un responsable institucional permanente que garantice la continuidad del proyecto entre distintos semestres.
+2. Formalizar la matriz RACI y comunicarla a docentes, estudiantes, administradores y personal de soporte.
+3. Implementar inicialmente los procesos prioritarios: solicitud de imágenes, reserva de laboratorios, gestión de incidencias y administración de usuarios.
+4. Establecer acuerdos de nivel de servicio para solicitudes, incidentes y disponibilidad de la plataforma.
+5. Crear una política de gobernanza de imágenes Docker, software y licencias.
+6. Mantener un inventario actualizado de hardware, software, cuentas, imágenes y licencias.
+7. Capacitar a docentes, estudiantes y personal técnico antes del inicio del piloto.
+8. Aplicar controles de seguridad como acceso por roles, escaneo de vulnerabilidades, firma de imágenes y registro de auditoría.
+9. Medir indicadores como disponibilidad, utilización del laboratorio, tiempo de atención, satisfacción de usuarios y cantidad de incidentes.
+10. Realizar revisiones periódicas para actualizar los procesos, riesgos y documentos.
+11. Implementar respaldos y pruebas de recuperación para garantizar la continuidad operativa.
+12. Validar los costos mediante inventario y cotizaciones antes de comprometer adquisiciones.
+13. Ampliar la plataforma a otros laboratorios únicamente después de verificar los resultados técnicos, económicos y organizacionales del piloto.
