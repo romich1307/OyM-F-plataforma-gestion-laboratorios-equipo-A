@@ -117,6 +117,21 @@ Para convertir la propuesta organizacional en un proyecto ejecutable, el present
 - Ejecutar primero un piloto controlado antes de comprometer un escalamiento institucional.
 - Tratar los costos como estimaciones sujetas a inventario, cotización y aprobación institucional.
 
+### 10.1 Roadmap de implementación académica
+
+El roadmap corrige la equivalencia temporal del proyecto original y organiza el trabajo alrededor de un año lectivo estándar de dos semestres de 17 semanas. La validación del MVP durante el periodo intersemestral estará condicionada a la disponibilidad voluntaria o formalmente asignada del equipo.
+
+| Fase | Nombre | Duración | Ancla académica | Hito de salida |
+|---:|---|---:|---|---|
+| 0 | Diagnóstico y diseño detallado | 4 semanas | Semanas 1–4 del semestre 1 | Arquitectura, alcance e inventario de hardware aprobados. |
+| 1A | MVP académico: construcción | 12 semanas | Semanas 5–16 del semestre 1 | Plataforma desplegada con infraestructura base operativa. |
+| 1B | MVP académico: validación | 4 semanas | Semana 17 e intersemestre | KPIs evaluados, documentación revisada y controles de seguridad ejecutados con Trivy. |
+| 2 | Piloto controlado de 1 a 3 cursos | 8 semanas | Semanas 5–12 del semestre 2 | Sin interrupciones críticas no mitigadas y satisfacción de usuarios igual o superior al 85 %. |
+| 3 | Evaluación y estabilización | 4 semanas | Semanas 13–16 del semestre 2 | Informe de cierre, costos reales y lecciones aprendidas aprobados. |
+| 4 | Escalamiento institucional | 12 semanas o más | Semestre 3 en adelante | Aprobación formal para ampliar la plataforma a la facultad. |
+
+Cada fase funciona como una puerta de decisión. Si no se cumple el hito de salida, el comité de gobierno deberá corregir el alcance, ampliar el plazo o suspender temporalmente el avance, en lugar de trasladar riesgos abiertos a la fase siguiente.
+
 ## 11. Recomendaciones de implementación
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
