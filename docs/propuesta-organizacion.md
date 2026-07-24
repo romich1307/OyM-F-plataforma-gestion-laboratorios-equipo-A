@@ -134,3 +134,17 @@ Asimismo, se recomienda:
 11. Implementar respaldos y pruebas de recuperación para garantizar la continuidad operativa.
 12. Validar los costos mediante inventario y cotizaciones antes de comprometer adquisiciones.
 13. Ampliar la plataforma a otros laboratorios únicamente después de verificar los resultados técnicos, económicos y organizacionales del piloto.
+
+## 11. Conclusiones
+
+**Responsable:** Paola Adamari Mayta Quispe — Scrum Master
+
+La revisión permitió determinar que la propuesta original constituye una base tecnológica útil para modernizar la gestión de los laboratorios de computación. Sus principales fortalezas son la estandarización de entornos, la utilización de imágenes de contenedores, la trazabilidad del software y la posibilidad de integrar recursos locales y servicios en la nube.
+
+Sin embargo, la tecnología por sí sola no garantiza una gestión eficiente. Para que la plataforma funcione correctamente es necesario complementarla con una estructura organizacional, responsables definidos, procesos formalizados, canales de comunicación, mecanismos de escalamiento e indicadores de desempeño.
+
+La propuesta desarrollada responde a estas necesidades mediante la definición de una situación futura o TO-BE. Esta considera la participación del director, encargado del laboratorio, administrador de la plataforma, docentes, estudiantes y personal de soporte, con responsabilidades diferenciadas.
+
+El roadmap propuesto reconoce que la disponibilidad de tiempo, personal e infraestructura es limitada. Por ello, plantea validar el inventario y el presupuesto antes de iniciar adquisiciones, ejecutar un piloto reducido y condicionar el escalamiento a resultados medibles.
+
+Finalmente, se concluye que la implementación debe realizarse gradualmente, evaluando sus resultados antes de ampliar el alcance. La mejora continua, la capacitación, la seguridad y la gobernanza del software serán factores indispensables para asegurar la sostenibilidad de la plataforma.
