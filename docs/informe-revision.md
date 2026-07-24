@@ -10,8 +10,6 @@
 
 ## 1. Introducción
 
-> *Documento 1 — Auditoría de la Propuesta del Repositorio*
-
 El presente informe recoge los comentarios de auditoría elaborados por los cuatro integrantes del equipo consultor sobre la propuesta del repositorio «Plataforma Híbrida de Gestión de Laboratorios de Computación». Cada integrante evaluó los documentos asignados actuando como consultor de Organización y Métodos (O&M), respondiendo las siguientes preguntas para cada archivo: qué aspectos están correctamente desarrollados, qué elementos pueden mejorarse, qué información falta y qué acciones se proponen.
 
 El objetivo de este informe es identificar las brechas entre la propuesta actual y las buenas prácticas de O&M, BPMN 2.0, ITIL 4, ISO 9001:2015, ISO/IEC 27001:2022, COBIT 2019 y DevSecOps, para así fundamentar las propuestas de mejora del Documento 2.
@@ -480,5 +478,3 @@ Con base en los hallazgos de la auditoría, el equipo consultor formula las sigu
 10. **Validar la capacidad de infraestructura:** Ejecutar pruebas de carga que simulen el "efecto campana" (acceso simultáneo de un aula completa) antes de comprometer la arquitectura propuesta.
 
 ---
-
-*Informe elaborado por el Equipo Consultor A — Asignatura Organización y Métodos, UNSA 2026.*
