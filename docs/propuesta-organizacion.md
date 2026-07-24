@@ -145,7 +145,7 @@ El equipo consultor ha definido que esta estructura no implica que los estudiant
 ---
 
 ## 7. Procesos organizacionales
-**Responsable:** León Hatches Curo - Analista BPMN
+**Responsable:** León Hatches Curo — Analista BPMN
 
 En esta sección, se documentan los principales procesos de gestión del laboratorio utilizando BPMN 2.0, definiendo sus actores, entradas, salidas, actividades y responsables.
 
@@ -319,6 +319,21 @@ Para este proceso se definen tres actores principales:
 | 5a | Estudiante | Activar cuenta en portal | El estudiante ingresa por primera vez y cambia su clave, finalizando el alta con éxito. |
 | 3b | Sistema Automatizado | Desactivar cuentas del ciclo | (Camino Offboarding) El sistema revoca los accesos de la lista cargada. |
 | 4b | Sistema Automatizado | Liberar recursos y almacenamiento | El sistema elimina los entornos y contenedores usados por esos alumnos, finalizando la baja. |
+
+---
+
+## 8. Indicadores de gestión (KPIs)
+
+Para evaluar el desempeño de la plataforma y medir la eficiencia de los procesos diseñados (BPMN), se proponen los siguientes Indicadores Clave de Rendimiento (KPIs). Estos permitirán tomar decisiones basadas en datos y garantizar la mejora continua del laboratorio.
+
+| Nombre del KPI | Objetivo | Fórmula de Cálculo | Meta | Frecuencia | Responsable |
+| ----- | ----- | ----- | :---: | :---: | :---: |
+| **1\. Tiempo de aprobación de nuevas imágenes** | Medir la rapidez con la que se atiende una solicitud de software nuevo para un curso. | (Suma del tiempo total de creación y aprobación) / (Total de imágenes nuevas) | ≤ 48 horas | Mensual | Responsable de Imágenes |
+| **2\. Tasa de resolución automática** | Evaluar qué tan eficiente es el catálogo para entregar imágenes sin intervención humana. | (Solicitudes de imagen entregadas por el sistema / Total de solicitudes) \* 100 | ≥ 70% | Mensual | Administrador de Laboratorio |
+| **3\. Tasa de efectividad de reservas (Check-in)** | Medir el uso real de los equipos frente a las reservas hechas, evitando el acaparamiento. | (Reservas con Check-in exitoso en código QR / Total de reservas generadas) \* 100 | ≥ 85% | Semanal | Administrador de Laboratorio |
+| **4\. Tiempo de resolución de incidencias** | Medir la rapidez del soporte técnico para arreglar equipos dañados o bloqueados. | (Suma del tiempo desde el reporte hasta el cierre del ticket) / (Total de tickets resueltos) | ≤ 2 horas | Mensual | Soporte Técnico |
+| **5\. Utilización de imágenes oficiales** | Promover el uso de entornos seguros y estandarizados en lugar de personalizados. | (Descargas de imágenes base oficiales / Total de descargas en Harbor) \* 100 | ≥ 75% | Semestral | Responsable de Imágenes |
+| **6\. Nivel de satisfacción del usuario** | Evaluar la experiencia general de los docentes y estudiantes con la plataforma. | (Encuestas con calificación positiva / Total de encuestas respondidas) \* 100 | ≥ 85% | Fin de semestre | Administrador de Laboratorio |
 
 ---
 
