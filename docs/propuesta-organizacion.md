@@ -87,21 +87,9 @@ El trabajo documental se organizó en cuatro jornadas. Esta planificación repre
 | Revisión integral | Scrum Master y equipo | 1 día | 2 h por integrante | Documento consolidado | Corrección de inconsistencias |
 | Consolidación y presentación | Todo el equipo | 1 día | 2 h por integrante | Word, Markdown y GitHub | Entregables finales |
 
-### 2.4 Roadmap preliminar de implementación
+El plan detallado para ejecutar la propuesta, incluyendo calendario académico, capacidad del equipo y costos, se desarrolla en la sección 10.
 
-Para mantener una propuesta realista, el roadmap diferencia la consultoría académica de la futura implementación de la plataforma. Los montos son rangos referenciales y deberán validarse mediante inventario y cotizaciones institucionales.
-
-| Etapa | Duración estimada | Alcance y recursos humanos mínimos | Recursos técnicos | Presupuesto referencial |
-|---|---:|---|---|---:|
-| Diagnóstico y diseño detallado | 4 semanas | 1 responsable institucional, 1 administrador y 4 estudiantes | Inventario y acceso a infraestructura actual | S/ 1 000–3 000 |
-| MVP académico | 12–16 semanas | 1 docente responsable, 1 administrador y equipo de 4–6 estudiantes | Servidor existente, almacenamiento y red segmentada | S/ 8 000–20 000 |
-| Piloto controlado | 8 semanas | Equipo técnico, 2 docentes y soporte de primer nivel | 1 laboratorio y 2 cursos piloto | S/ 3 000–8 000 |
-| Evaluación y estabilización | 4 semanas | Comité de gobierno y responsables técnicos | Monitoreo, respaldos y pruebas | S/ 2 000–5 000 |
-| Escalamiento institucional | 12 semanas o más | Equipo permanente de operación y soporte | Capacidad adicional según demanda | Sujeto a resultados del piloto |
-
-El inicio de cada etapa depende de la aprobación de los entregables de la etapa anterior. No se recomienda adquirir infraestructura adicional antes de completar el inventario, la prueba de capacidad y el piloto.
-
-### 2.5 Tablero Kanban resumido
+### 2.4 Tablero Kanban resumido
 
 | Pendiente | En proceso | En revisión | Terminado |
 |---|---|---|---|
@@ -113,7 +101,7 @@ El inicio de cada etapa depende de la aprobación de los entregables de la etapa
 
 El Scrum Master actualiza el tablero después de cada reunión. Una actividad solo pasa a “Terminado” cuando cuenta con evidencia, responsable identificado y revisión de al menos otro integrante.
 
-## 10. Recomendaciones de implementación
+## 11. Recomendaciones de implementación
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
 
@@ -135,7 +123,7 @@ Asimismo, se recomienda:
 12. Validar los costos mediante inventario y cotizaciones antes de comprometer adquisiciones.
 13. Ampliar la plataforma a otros laboratorios únicamente después de verificar los resultados técnicos, económicos y organizacionales del piloto.
 
-## 11. Conclusiones
+## 12. Conclusiones
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
 
