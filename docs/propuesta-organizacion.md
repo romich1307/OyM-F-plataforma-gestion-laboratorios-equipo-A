@@ -513,6 +513,23 @@ Definimos cómo se intercambia la información oficial entre los actores, especi
 | 14 | Comunicado de mantenimiento programado | Admin. de Plataforma | Todos los usuarios | Portal + correo | Con 72 horas de anticipación | Admin. de Plataforma |
 | 15 | Solicitud de imagen para nuevo semestre | Docente | Admin. de Plataforma | Formulario del portal | Al menos 3 semanas antes del inicio de clases | Docente |
 
+---
+
+### 6.3 Matriz de Escalamiento
+
+La Matriz de Escalamiento define el procedimiento para escalar problemas o incidencias según su nivel de criticidad. Resuelve la brecha identificada en la auditoría: el repositorio original no definía qué actor recibe cada tipo de problema ni en qué tiempo máximo debe recibir atención.
+
+#### Niveles de Escalamiento
+
+| Nivel | Nombre | Descripción del nivel | Receptor | Tiempo máx. de respuesta |
+|:-----:|--------|-----------------------|----------|:------------------------:|
+| **N0** | Autoservicio | El usuario resuelve el problema consultando la guía de usuario o la sección de preguntas frecuentes del portal. No requiere intervención humana. | Portal de soporte / FAQ | Inmediato |
+| **N1** | Soporte TI (primer nivel) | Problema técnico que el usuario no puede resolver por su cuenta: falla de conexión, problema con Docker en equipo personal, error de login. El Personal de Soporte TI atiende y resuelve. | Personal de Soporte TI | ≤ 4 horas hábiles |
+| **N2** | Administrador de Plataforma (segundo nivel) | Problema que requiere acceso a sistemas, configuración de plataforma o diagnóstico técnico avanzado. El Personal de Soporte TI escala al Administrador cuando no puede resolver en N1. | Administrador de Plataforma | ≤ 1 hora hábil |
+| **N3** | Encargado de Laboratorio (tercer nivel) | Incidente de alta prioridad con impacto en múltiples usuarios (P1/P2), decisión de política operativa o situación que requiere autorización institucional de nivel intermedio. | Encargado de Laboratorio | ≤ 15 minutos |
+| **N4** | Director de Carrera / Comité TI (nivel institucional) | Impacto institucional grave, brecha de seguridad de datos personales, decisión estratégica que supera la autoridad del Encargado o situación con repercusión externa. | Director de Carrera | Inmediato (guardia activa) |
+
+
 
 
 
