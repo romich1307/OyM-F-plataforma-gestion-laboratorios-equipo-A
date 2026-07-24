@@ -168,6 +168,20 @@ Se establecen directrices obligatorias para regir el ciclo de vida de los conten
 La trazabilidad permite auditar con precisión retrospectiva el origen, creador y estado de integridad de cualquier activo digital desplegado. En el ecosistema del laboratorio, esto significa conocer exactamente qué código fuente dio origen al contenedor, quién compiló la imagen, qué herramientas de terceros fueron añadidas y si se cuenta con los derechos de uso vigentes, facilitando análisis rápidos de causa raíz ante fallas de infraestructura o incidentes de seguridad.
 
 ![diagrama: Gobernanza de Seguridad y Firma Digital)](./architecture/trazabilidad.jpg)
+
+Mediante el uso de etiquetas de metadatos integradas en los contenedores dentro de Harbor, es posible auditar de manera precisa los siguientes puntos:
+*   **Origen y autoría:** Quién construyó la imagen (identificando el GitLab runner ejecutor y el commit de origen en el repositorio).
+*   **Aprobación y confianza:** Quién validó y aprobó la publicación (verificable mediante la firma criptográfica del Responsable de Imágenes).
+*   **Estado de seguridad:** Qué vulnerabilidades específicas existían al momento exacto del despliegue en el catálogo.
+*   **Composición interna:** Qué dependencias, librerías y tipos de licencias de software componen la imagen.
+*   **Análisis de Causa Raíz:** Permite rastrear el origen del código causante de un incidente y parchar la imagen base de forma centralizada en minutos.
+
+### 9.6 Beneficios para una empresa de software
+El modelo diseñado para la universidad es escalable al sector corporativo, generando los siguientes beneficios:
+*   **Reducción del Time-to-Market:** El aprovisionamiento de un entorno de desarrollo seguro pasa de tardar días a tomar solo unos minutos.
+*   **Cumplimiento Normativo (Auditorías):** Facilita certificaciones internacionales de ciberseguridad (ISO/IEC 27001, SOC 2 y marcos COBIT).
+*   **Eficiencia de Costos:** El uso de imágenes optimizadas y políticas automáticas de retención reducen los costos de almacenamiento en la nube.
+*   **Mitigación de Riesgos:** Garantiza un entorno con cero multas por uso de software no licenciado y blinda frente a ataques a la cadena de suministro (Software Supply Chain Attacks).
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
