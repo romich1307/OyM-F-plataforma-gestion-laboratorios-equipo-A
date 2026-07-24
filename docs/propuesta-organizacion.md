@@ -361,4 +361,28 @@ En coherencia con las brechas identificadas durante la auditoría (Documento 1),
 
 **Indicadores asociados:** Tasa de utilización del laboratorio (horas usadas / horas disponibles), tiempo promedio de resolución de reservas conflictivas, número de incidentes P1/P2 por mes.
 
+---
+
+### 5.3 Administrador de Plataforma
+
+**Misión:** Mantener la operación técnica de la plataforma digital (Harbor, Keycloak, Kubernetes, GitLab, PostgreSQL, MinIO), garantizar la disponibilidad de los servicios, gestionar el catálogo de imágenes Docker y ejecutar los controles de seguridad definidos.
+
+**Responsabilidades:**
+- Administrar el catálogo de imágenes en Harbor: aprobar, publicar y retirar imágenes del catálogo.
+- Gestionar las cuentas de usuario en Keycloak: provisioning, deprovisioning y control de roles (RBAC).
+- Ejecutar el escaneo de vulnerabilidades con Trivy y la firma digital con Cosign para cada imagen nueva o actualizada.
+- Monitorear la disponibilidad de la infraestructura (Kubernetes, bases de datos, almacenamiento).
+- Gestionar los backups de PostgreSQL y MinIO según la política de respaldo definida.
+- Atender incidentes técnicos de nivel P2 y P3 (los P1 se escalan al Encargado de Laboratorio).
+- Ejecutar el proceso de Control de Cambios para modificaciones en el entorno de producción.
+- Generar el reporte mensual de estado del catálogo (imágenes activas, en revisión, retiradas, con CVEs pendientes).
+- Mantener actualizada la gestión de secretos (rotación de credenciales, administración de vault).
+
+**Nivel de autoridad:** Gestión técnica de la plataforma. Responde ante el Encargado de Laboratorio. Supervisa al Personal de Soporte TI en temas técnicos.
+
+**Limitaciones:** No puede aprobar cambios de política institucional ni publicar imágenes con CVE CRITICAL sin autorización del Encargado de Laboratorio.
+
+**Indicadores asociados:** Uptime de Harbor (objetivo: ≥ 99.5%), tiempo promedio de aprobación de imagen (objetivo: ≤ 48 horas), número de vulnerabilidades críticas no resueltas en el catálogo (objetivo: 0).
+
+
 
