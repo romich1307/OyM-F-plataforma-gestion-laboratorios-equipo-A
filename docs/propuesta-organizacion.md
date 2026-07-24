@@ -140,7 +140,8 @@ El equipo consultor ha definido que esta estructura no implica que los estudiant
 ---
 
 ## 9. Gobernanza de Imágenes Docker, Software y Licencias
-**Responsable:** Romina Camargo Hilachoque — Product Owner
+**Responsable:** Romina Camargo Hilachoque — Product Owner 
+
 Como parte de la consultoría se identificó la necesidad de establecer una política formal de gobernanza para la administración de imágenes Docker, software y licencias.
 
 ### 9.1 ¿Qué es la gobernanza del software?
