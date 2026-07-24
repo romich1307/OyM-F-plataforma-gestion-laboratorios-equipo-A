@@ -286,6 +286,40 @@ Para este proceso se definen tres actores principales:
 | 6 | Sistema Helpdesk | Notificar resolución | El sistema envía una alerta al usuario indicando que su equipo ya está operativo. |
 | 7 | Usuario | Validar solución y cerrar | El usuario confirma que el problema fue solucionado, cerrando el ticket con éxito. |
 
+## 7.6. Onboarding y Offboarding (BPMN)
+
+Se modela el proceso de creación, administración y desactivación de cuentas de usuarios durante el inicio y cierre de cada periodo académico.
+
+### 7.6.1. Objetivo
+
+Administrar de forma segura el ciclo de vida de los accesos al laboratorio, otorgando credenciales automáticas a los estudiantes matriculados al inicio del semestre y revocándolas al finalizar para liberar recursos tecnológicos.
+
+### 7.6.2. Actores
+
+Para este proceso se definen tres actores principales:
+
+1. **Administrador de Laboratorio:** Quien inicia el proceso subiendo la lista de estudiantes.  
+2. **Sistema Automatizado:** Plataforma que gestiona la creación de usuarios, asignación de roles y envío de correos.  
+3. **Estudiante:** Usuario que recibe las credenciales y activa su cuenta.
+
+### 7.6.3. Diagrama
+
+<div align="center">
+  <img src="./diagrams/Onboarding y Offboarding.png" alt="Onboarding y Offboarding" width="90%">
+</div>
+
+### 7.6.4. Tabla de Actividades
+
+| Paso | Actor | Actividad (Etiqueta BPMN) | Descripción Detallada |
+| :---: | :---: | ----- | ----- |
+| 1 | Administrador | Cargar nómina de estudiantes | El administrador sube al portal el archivo con los datos de los alumnos matriculados en el ciclo. |
+| 2 | Sistema Automatizado | ¿Qué tipo de proceso es? | Compuerta de decisión que evalúa si la lista es para inicio (Onboarding) o fin de semestre (Offboarding). |
+| 3a | Sistema Automatizado | Crear cuentas y perfiles | (Camino Onboarding) El sistema genera los usuarios y asigna los permisos necesarios. |
+| 4a | Sistema Automatizado | Enviar credenciales de acceso | El sistema manda un correo automático al estudiante con su usuario y clave temporal. |
+| 5a | Estudiante | Activar cuenta en portal | El estudiante ingresa por primera vez y cambia su clave, finalizando el alta con éxito. |
+| 3b | Sistema Automatizado | Desactivar cuentas del ciclo | (Camino Offboarding) El sistema revoca los accesos de la lista cargada. |
+| 4b | Sistema Automatizado | Liberar recursos y almacenamiento | El sistema elimina los entornos y contenedores usados por esos alumnos, finalizando la baja. |
+
 ---
 
 ## 9. Gobernanza de Imágenes Docker, Software y Licencias
