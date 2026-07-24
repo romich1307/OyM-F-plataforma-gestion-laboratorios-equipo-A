@@ -43,3 +43,31 @@ Para desarrollar la consultoría se asignaron roles que permitieron distribuir l
 | José Manuel Morocco Saico | Analista Organizacional | Definir la estructura organizacional, los roles, la matriz RACI, los mecanismos de comunicación, el escalamiento, los indicadores y la gobernanza. |
 
 Aunque cada integrante asumió una responsabilidad principal, la revisión final se realizó de manera conjunta para evitar contradicciones entre los procesos, roles y recomendaciones.
+
+### 2.2 Metodología aplicada
+
+La metodología se organizó en seis etapas:
+
+#### Etapa 1: Revisión y levantamiento de información
+
+Se revisaron los archivos del repositorio para comprender el propósito de la plataforma, sus objetivos, componentes técnicos, procesos y modelo organizacional.
+
+#### Etapa 2: Auditoría documental
+
+Cada integrante evaluó los archivos asignados empleando criterios relacionados con claridad, coherencia, viabilidad, trazabilidad, seguridad y gestión de procesos. Los resultados fueron registrados como comentarios dentro del repositorio y en el Informe de Revisión.
+
+#### Etapa 3: Diagnóstico AS-IS
+
+Los hallazgos fueron consolidados para describir la situación actual. Se identificaron problemas como falta de responsables claramente definidos, procesos incompletos, ausencia de indicadores, riesgos de seguridad y debilidades en el control del software y las licencias.
+
+#### Etapa 4: Diseño de la propuesta TO-BE
+
+Sobre la base del diagnóstico se definió una estructura organizacional mejorada, acompañada de roles, responsabilidades, matrices organizacionales y procesos BPMN.
+
+#### Etapa 5: Validación y revisión
+
+Se verificó que cada problema identificado tuviera una recomendación o mecanismo de solución. También se revisó la coherencia entre la matriz RACI, los procesos, los indicadores y la estructura organizacional.
+
+#### Etapa 6: Consolidación de entregables
+
+Finalmente, se integraron los aportes en dos productos: el Informe de Revisión y Comentarios y la Propuesta de Organización.
