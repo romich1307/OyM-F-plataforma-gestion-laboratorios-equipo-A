@@ -106,6 +106,8 @@ El Scrum Master actualiza el tablero después de cada reunión. Una actividad so
 
 La gestión de los laboratorios de cómputo tradicionales en la institución presenta ineficiencias estructurales críticas bajo el enfoque de procesos de Organización y Métodos (O&M). Al evaluar el flujo de valor, se evidencia que el modelo tradicional es incompatible con la agilidad que exige nuestro calendario académico.
 
+![diagrama de árbol de problemas: Instalación Manual vs. Falta de Auditoría](./architecture/grafico1.jpg)
+Para dimensionar el impacto de estos problemas en la realidad académica de la facultad, se ha elaborado la siguiente matriz de diagnóstico:
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
