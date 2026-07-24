@@ -116,6 +116,16 @@ Para dimensionar el impacto de estos problemas en la realidad académica de la f
 | **Ausencia de SLAs Operativos** | Solicitudes de nuevo software mediante procesos burocráticos y manuales sin tiempos de respuesta definidos. | Los docentes pueden esperar semanas por una aplicación, retrasando o cancelando prácticas de laboratorio. |
 | **Falta de Trazabilidad y Gobernanza** | Nulo control sobre versiones instaladas, procedencia del código y estado de las licencias de uso. | Riesgos legales por infracción de propiedad intelectual y exposición a brechas de seguridad informática. |
 | **Subutilización de Hardware** | Reservas gestionadas por canales informales (correos o bases de datos desactualizadas). | Solapamiento de horarios, tiempos muertos entre clases y subutilización de la infraestructura instalada. |
+
+---
+
+## 4. Propuesta de estructura organizacional (TO-BE)
+**Responsable:** Romina Camargo Hilachoque — Product Owner
+Para resolver los cuellos de botella detectados en el AS-IS y garantizar que el proyecto mantenga continuidad entre los semestres académicos, se propone adoptar un **Modelo Organizacional Ágil (Spotify Adaptado)**. 
+
+![diagrama de estructura organizacional: Tribu, Chapters y Squads)](./architecture/grafico2.jpg)
+
+El equipo consultor ha definido que esta estructura no implica que los estudiantes actuales desarrollen la plataforma, sino que establece el marco de trabajo metodológico que deberá seguir el equipo técnico asignado para evitar el desorden. La propuesta se organiza de la siguiente manera:
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
