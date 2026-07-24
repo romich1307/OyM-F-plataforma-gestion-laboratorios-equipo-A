@@ -489,6 +489,31 @@ Esta matriz asigna responsabilidades indicando quién **ejecuta (R)**, quién **
 | Gestión de licencias de software | C | A | R | C | C | I | I |
 | Revisión semestral del sistema | A | R | C | C | C | I | I |
 
+---
+
+### 6.2 Matriz de Comunicación
+
+Definimos cómo se intercambia la información oficial entre los actores, especificando el medio de comunicación autorizado, la frecuencia de las interacciones y los responsables directos de cada emisión y recepción. Esta matriz resuelve la brecha detectada en la auditoría: el repositorio original no definía ningún canal ni frecuencia formal de comunicación entre sus actores.
+
+| N.° | Información comunicada | Emisor | Receptor | Canal | Frecuencia | Responsable de emitir |
+|:---:|------------------------|--------|----------|-------|:----------:|----------------------|
+| 1 | Confirmación de reserva de equipo | Sistema (portal) | Alumno / Docente | Correo electrónico automático | Por cada reserva | Sistema |
+| 2 | Recordatorio de reserva próxima | Sistema (portal) | Alumno / Docente | Correo electrónico automático | 15 minutos antes | Sistema |
+| 3 | Notificación de imagen disponible en catálogo | Admin. de Plataforma / Sistema | Docente solicitante | Correo electrónico | Por evento (al publicar) | Admin. de Plataforma |
+| 4 | Notificación de rechazo de imagen (con justificación) | Admin. de Plataforma | Docente solicitante | Correo electrónico | Por evento (al rechazar) | Admin. de Plataforma |
+| 5 | Reporte mensual de estado del catálogo | Admin. de Plataforma | Encargado de Laboratorio | Correo + documento PDF | Mensual | Admin. de Plataforma |
+| 6 | Reporte mensual de uso del laboratorio | Encargado de Laboratorio | Director de Carrera | Documento formal / reunión | Mensual | Encargado de Laboratorio |
+| 7 | Notificación de incidente activo (P1/P2) | Personal de Soporte TI | Admin. de Plataforma + Encargado | Canal de mensajería (Teams/Slack) | Inmediata (por evento) | Personal de Soporte TI |
+| 8 | Actualización de estado de incidente | Admin. de Plataforma | Usuarios afectados | Correo electrónico | Cada 1 hora mientras esté activo | Admin. de Plataforma |
+| 9 | Cierre de incidente con causa raíz | Admin. de Plataforma | Encargado de Laboratorio | Documento Post-Incident Review | Dentro de 48 h tras el cierre | Admin. de Plataforma |
+| 10 | Convocatoria de Revisión Semestral | Encargado de Laboratorio | Director, Docentes, Admin. | Correo electrónico + agenda | Una vez por semestre | Encargado de Laboratorio |
+| 11 | Informe de Revisión Semestral | Encargado de Laboratorio | Director de Carrera | Documento formal | Una vez por semestre | Encargado de Laboratorio |
+| 12 | Notificación de inicio de semestre (onboarding) | Encargado de Laboratorio | Alumnos y Docentes nuevos | Correo electrónico con instrucciones | Inicio de cada semestre | Encargado de Laboratorio |
+| 13 | Alerta de imagen con CVE detectado post-publicación | Sistema (Trivy) / Admin. | Encargado de Laboratorio | Correo de alerta automática | Por evento (escaneo periódico) | Sistema / Admin. de Plataforma |
+| 14 | Comunicado de mantenimiento programado | Admin. de Plataforma | Todos los usuarios | Portal + correo | Con 72 horas de anticipación | Admin. de Plataforma |
+| 15 | Solicitud de imagen para nuevo semestre | Docente | Admin. de Plataforma | Formulario del portal | Al menos 3 semanas antes del inicio de clases | Docente |
+
+
 
 
 
