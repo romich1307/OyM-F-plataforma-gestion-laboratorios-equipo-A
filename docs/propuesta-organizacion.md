@@ -384,5 +384,45 @@ En coherencia con las brechas identificadas durante la auditoría (Documento 1),
 
 **Indicadores asociados:** Uptime de Harbor (objetivo: ≥ 99.5%), tiempo promedio de aprobación de imagen (objetivo: ≤ 48 horas), número de vulnerabilidades críticas no resueltas en el catálogo (objetivo: 0).
 
+---
+
+### 5.4 Docentes / Product Owners de Curso
+
+**Misión:** Definir los requerimientos de software para sus cursos, solicitar y validar las imágenes Docker necesarias para las actividades académicas, y coordinar con el Encargado de Laboratorio la asignación de horarios y recursos.
+
+**Responsabilidades:**
+- Solicitar las imágenes Docker requeridas para su curso al inicio de cada semestre, con un mínimo de tres semanas de anticipación.
+- Validar que las imágenes proporcionadas corresponden a los requerimientos pedagógicos del curso.
+- Reservar los horarios de laboratorio para sus clases y evaluaciones.
+- Comunicar a los estudiantes cómo acceder y utilizar las imágenes oficiales del catálogo.
+- Reportar al Encargado cualquier problema con las imágenes o recursos durante el semestre.
+- Aprobar el uso de software adicional no incluido en las imágenes estándar, con justificación académica documentada.
+
+**Nivel de autoridad:** Usuario privilegiado con capacidad de solicitud y validación. No tienen acceso a los paneles de administración de Harbor, Kubernetes ni Keycloak.
+
+**Limitaciones:** No pueden instalar ni modificar software directamente en los equipos del laboratorio. Solo pueden solicitar, validar y reportar.
+
+**Indicadores asociados:** Porcentaje de solicitudes de imagen realizadas con al menos tres semanas de anticipación, tasa de satisfacción con el catálogo de imágenes (encuesta semestral).
+
+---
+
+### 5.5 Alumnos / Desarrolladores
+
+**Misión:** Utilizar los recursos del laboratorio —físicos y digitales— de forma responsable y dentro de los procesos establecidos, para el cumplimiento de sus actividades académicas.
+
+**Responsabilidades:**
+- Reservar equipos del laboratorio a través del portal, respetando los horarios disponibles y el tiempo máximo permitido.
+- Descargar las imágenes oficiales del catálogo Harbor para usarlas en sus computadoras personales.
+- Realizar check-in y check-out al inicio y fin de cada uso de los equipos del laboratorio.
+- Reportar problemas técnicos (equipos dañados, imágenes con errores) al canal de soporte definido.
+- Cumplir con la política de uso aceptable del laboratorio: no instalar software no autorizado, no compartir credenciales, no modificar configuraciones del sistema.
+
+**Nivel de autoridad:** Usuario final. No tienen acceso a paneles de administración de ningún componente del sistema.
+
+**Limitaciones:** No pueden crear ni modificar imágenes en el catálogo oficial. Solo pueden descargar imágenes previamente aprobadas. Tienen una cuota máxima de horas de reserva semanal.
+
+**Indicadores asociados:** Tasa de uso de imágenes oficiales vs. imágenes propias (objetivo: ≥ 75%), tiempo promedio de configuración del entorno de trabajo (objetivo: ≤ 15 minutos).
+
+
 
 
