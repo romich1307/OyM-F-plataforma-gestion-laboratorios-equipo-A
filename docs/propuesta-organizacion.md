@@ -423,6 +423,26 @@ En coherencia con las brechas identificadas durante la auditoría (Documento 1),
 
 **Indicadores asociados:** Tasa de uso de imágenes oficiales vs. imágenes propias (objetivo: ≥ 75%), tiempo promedio de configuración del entorno de trabajo (objetivo: ≤ 15 minutos).
 
+---
+
+### 5.6 Personal de Soporte TI
+
+**Misión:** Apoyar al Administrador de Plataforma en las tareas operativas rutinarias: mantenimiento físico de equipos, soporte de primer nivel a usuarios, y ejecución de tareas técnicas no críticas bajo supervisión directa.
+
+**Responsabilidades:**
+- Atender solicitudes de soporte de primer nivel de estudiantes y docentes: problemas de conexión, dificultades con Docker/Podman en computadoras personales, problemas de inicio de sesión.
+- Ejecutar el mantenimiento preventivo de los equipos físicos del laboratorio según el calendario establecido.
+- Ejecutar backups manuales cuando el sistema automatizado falla.
+- Registrar todas las incidencias atendidas en el sistema de ticketing.
+- Escalar al Administrador de Plataforma los incidentes que superen su nivel de resolución (N1).
+
+**Nivel de autoridad:** Soporte operativo de primer nivel. Responde ante el Administrador de Plataforma.
+
+**Limitaciones:** No tiene acceso a Harbor ni a la configuración de Kubernetes. No puede aprobar imágenes ni modificar permisos de usuarios. No puede tomar decisiones de política técnica de forma autónoma.
+
+**Indicadores asociados:** Tiempo promedio de atención de incidentes N1 (objetivo: ≤ 4 horas hábiles), porcentaje de incidentes resueltos sin escalar (objetivo: ≥ 70%).
+
+
 
 
 
