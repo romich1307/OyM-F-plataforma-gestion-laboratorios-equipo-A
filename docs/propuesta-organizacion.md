@@ -135,6 +135,7 @@ El equipo consultor ha definido que esta estructura no implica que los estudiant
 | **Ejecución (Vertical)** | **Squad Hardware & Lab Ops.** | Gestiona el inventario físico, el control de accesos mediante códigos QR y el mantenimiento del hardware. |
 | **Estandarización (Horizontal)** | **Chapters Técnicos** | Liderados por profesores con experiencia industrial. Garantizan la transferencia tecnológica y el uso de buenas prácticas de desarrollo. |
 | **Auditoría (Transversal)** | **Chapter Organización y Métodos** | Asigna un Process Owner a cada squad para mapear flujos, auditar la Matriz RACI y simplificar la burocracia técnica. |
+
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
