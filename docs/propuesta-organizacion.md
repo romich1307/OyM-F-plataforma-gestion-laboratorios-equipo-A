@@ -101,6 +101,22 @@ El plan detallado para ejecutar la propuesta, incluyendo calendario académico, 
 
 El Scrum Master actualiza el tablero después de cada reunión. Una actividad solo pasa a “Terminado” cuando cuenta con evidencia, responsable identificado y revisión de al menos otro integrante.
 
+## 10. Plan de implementación y viabilidad de recursos
+
+**Responsable:** Paola Adamari Mayta Quispe — Scrum Master
+
+Con base en la auditoría realizada en el Documento 1, se identificaron riesgos críticos para la viabilidad del proyecto original: duraciones que no se alinean con el calendario académico, cargas horarias insostenibles para los estudiantes y ausencia de una estimación de costos de infraestructura, red y contingencia.
+
+Para convertir la propuesta organizacional en un proyecto ejecutable, el presente plan integra tres instrumentos: un roadmap vinculado al calendario académico, un cálculo de capacidad sostenible del equipo y una matriz referencial de inversión tecnológica. Estos instrumentos deberán revisarse al inicio de cada semestre con información real de matrícula, inventario, disponibilidad docente y cotizaciones.
+
+### Principios de viabilidad
+
+- No iniciar una fase sin aprobar los entregables y recursos de la fase anterior.
+- Reutilizar infraestructura existente cuando cumpla los requisitos de capacidad y seguridad.
+- Ajustar el alcance del sprint a la disponibilidad académica real de los estudiantes.
+- Ejecutar primero un piloto controlado antes de comprometer un escalamiento institucional.
+- Tratar los costos como estimaciones sujetas a inventario, cotización y aprobación institucional.
+
 ## 11. Recomendaciones de implementación
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
