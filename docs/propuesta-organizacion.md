@@ -121,6 +121,7 @@ Para dimensionar el impacto de estos problemas en la realidad académica de la f
 
 ## 4. Propuesta de estructura organizacional (TO-BE)
 **Responsable:** Romina Camargo Hilachoque — Product Owner
+
 Para resolver los cuellos de botella detectados en el AS-IS y garantizar que el proyecto mantenga continuidad entre los semestres académicos, se propone adoptar un **Modelo Organizacional Ágil (Spotify Adaptado)**. 
 
 ![diagrama de estructura organizacional: Tribu, Chapters y Squads)](./architecture/grafico2.jpg)
@@ -135,6 +136,21 @@ El equipo consultor ha definido que esta estructura no implica que los estudiant
 | **Ejecución (Vertical)** | **Squad Hardware & Lab Ops.** | Gestiona el inventario físico, el control de accesos mediante códigos QR y el mantenimiento del hardware. |
 | **Estandarización (Horizontal)** | **Chapters Técnicos** | Liderados por profesores con experiencia industrial. Garantizan la transferencia tecnológica y el uso de buenas prácticas de desarrollo. |
 | **Auditoría (Transversal)** | **Chapter Organización y Métodos** | Asigna un Process Owner a cada squad para mapear flujos, auditar la Matriz RACI y simplificar la burocracia técnica. |
+
+---
+
+## 9. Gobernanza de Imágenes Docker, Software y Licencias
+
+Como parte de la consultoría se identificó la necesidad de establecer una política formal de gobernanza para la administración de imágenes Docker, software y licencias.
+
+### 9.1 ¿Qué es la gobernanza del software?
+La gobernanza del software es el marco estructurado de directrices, políticas, procesos y controles organizacionales que regulan la adquisición, el desarrollo, el despliegue, el mantenimiento y el retiro de activos de software y contenedores dentro de una infraestructura tecnológica. Define con claridad los derechos de decisión, los roles y las responsabilidades, garantizando el cumplimiento técnico y legal del software utilizado.
+
+### 9.2 ¿Por qué es necesaria?
+En una plataforma híbrida de laboratorios basada en microservicios y contenedores, la gobernanza de TI es imprescindible para:
+*   **Evitar la proliferación de contenedores no controlados (Registry Bloat):** Prevenir que se saturen los volúmenes de almacenamiento del registro privado (Harbor) con imágenes obsoletas, duplicadas o sin uso lectivo real.
+*   **Garantizar la Seguridad del Entorno:** Asegurar que ninguna imagen contenga malware o dependencias con vulnerabilidades críticas conocidas que pongan en riesgo la red de la universidad o de la empresa cliente.
+*   **Alineación de Cumplimiento Legal:** Mitigar riesgos de propiedad intelectual y demandas legales controlando estrictamente las licencias del software embebido en los contenedores.
 
 ## 10. Plan de implementación y viabilidad de recursos
 
