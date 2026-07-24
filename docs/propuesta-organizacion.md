@@ -126,6 +126,10 @@ Para resolver los cuellos de botella detectados en el AS-IS y garantizar que el 
 ![diagrama de estructura organizacional: Tribu, Chapters y Squads)](./architecture/grafico2.jpg)
 
 El equipo consultor ha definido que esta estructura no implica que los estudiantes actuales desarrollen la plataforma, sino que establece el marco de trabajo metodológico que deberá seguir el equipo técnico asignado para evitar el desorden. La propuesta se organiza de la siguiente manera:
+
+| Nivel Estructural | Equipo / Rol | Misión Organizacional TO-BE |
+| :--- | :--- | :--- |
+| **Alineación Estratégica** | **Tribu: "Platform Lab"** | Liderada por el Director de Laboratorio (Product Owner General). Asegura la continuidad del proyecto entre semestres y alinea el trabajo técnico con los objetivos académicos. |
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
