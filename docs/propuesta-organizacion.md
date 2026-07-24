@@ -130,6 +130,9 @@ El equipo consultor ha definido que esta estructura no implica que los estudiant
 | Nivel Estructural | Equipo / Rol | Misión Organizacional TO-BE |
 | :--- | :--- | :--- |
 | **Alineación Estratégica** | **Tribu: "Platform Lab"** | Liderada por el Director de Laboratorio (Product Owner General). Asegura la continuidad del proyecto entre semestres y alinea el trabajo técnico con los objetivos académicos. |
+| **Ejecución (Vertical)** | **Squad Core Platform** | Asegura la estabilidad de la red, los servidores (Proxmox VE), el clúster de Kubernetes y el almacenamiento (MinIO). |
+| **Ejecución (Vertical)** | **Squad Image & Container Mgt.** | Enfocado exclusivamente en construir, auditar, asegurar y firmar el catálogo de contenedores cumpliendo tiempos de entrega estrictos. |
+| **Ejecución (Vertical)** | **Squad Hardware & Lab Ops.** | Gestiona el inventario físico, el control de accesos mediante códigos QR y el mantenimiento del hardware. |
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
