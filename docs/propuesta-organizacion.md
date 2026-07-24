@@ -150,6 +150,45 @@ Para la correcta lectura de los diagramas BPMN posteriores, se han definido los 
 | Responsable de Imágenes | Humano | Gestor técnico del catálogo de contenedores (Docker). Evalúa, construye y aprueba manualmente las imágenes que requieren personalización. |
 | Sistema Automatizado (Plataforma) | Sistema | Conjunto de herramientas tecnológicas (Harbor, Keycloak, Trivy) encargado de ejecutar tareas automáticas (service tasks), como escaneo de vulnerabilidades, envío de correos y entrega directa de imágenes. |
 
+## 7.3. Solicitud de imágenes para cursos (BPMN)
+
+Se modela el proceso mediante el cual los docentes solicitan imágenes Docker para sus cursos, incluyendo el flujo de aprobación y publicación correspondiente.
+
+### 7.3.1. Objetivo
+
+Estandarizar y asegurar la provisión de entornos de software (imágenes de contenedores Docker) requeridos por los docentes, garantizando que todo recurso publicado en el catálogo del laboratorio esté libre de vulnerabilidades y cuente con la aprobación formal del responsable técnico.
+
+### 7.3.2. Actores
+
+Para este proceso se definen tres actores principales:
+
+1. **Docente (Product Owner):** Usuario que detona el proceso al requerir una imagen específica para su curso.  
+2. **Sistema Automatizado (Harbor / Trivy):** Plataforma tecnológica que ejecuta tareas de servicio (Service Tasks) como búsquedas automáticas y escaneos de seguridad.  
+3. **Responsable de Imágenes:** Actor técnico encargado de evaluar, construir, aprobar y publicar las imágenes que no se resuelven de forma automática.
+
+### 7.3.3. Diagrama
+
+
+
+### 7.3.4. Tabla de Actividades
+
+| Paso | Actor | Actividad (Etiqueta BPMN) | Descripción Detallada |
+| :---: | :---: | ----- | ----- |
+| 1 | Docente | Registrar solicitud de imagen | El docente ingresa al portal y completa el formulario especificando el software, versión y curso requerido. |
+| 2 | Sistema Automatizado | Buscar imagen en repositorio | El sistema consulta automáticamente Harbor para verificar si la imagen solicitada ya existe en el catálogo. |
+| 3 | Sistema Automatizado | ¿Existe y está actualizada? | Compuerta de decisión que evalúa el resultado de la búsqueda en la base de datos. |
+| 4a | Sistema Automatizado | Entregar enlace de descarga | (Camino Sí) El sistema aprueba la solicitud instantáneamente y envía el acceso al docente. |
+| 4b | Sistema Automatizado | Notificar requerimiento | (Camino No) El sistema genera un ticket automático dirigido al área técnica para su creación. |
+| 5 | Responsable de Imágenes | Buscar imagen base oficial | El encargado revisa repositorios confiables (ej. Docker Hub) para encontrar una base segura. |
+| 6 | Responsable de Imágenes | ¿Existe imagen oficial? | Compuerta de decisión para definir el método de construcción del contenedor. |
+| 7a | Responsable de Imágenes | Importar imagen oficial | (Camino Sí) Se descarga la imagen base verificada para adaptarla al curso. |
+| 7b | Responsable de Imágenes | Crear imagen personalizada | (Camino No) El responsable construye el contenedor desde cero escribiendo los comandos necesarios. |
+| 8 | Sistema Automatizado | Ejecutar escaneo de seguridad | La herramienta Trivy analiza el contenedor en busca de vulnerabilidades antes de su publicación. |
+| 9 | Sistema Automatizado | ¿Escaneo exitoso? | Compuerta de decisión de seguridad estricta para aprobar el pase a producción. |
+| 10a | Sistema Automatizado | Notificar rechazo de seguridad | (Camino No) El proceso se aborta (Error) y se notifica al responsable para que parchee las vulnerabilidades. |
+| 10b | Responsable de Imágenes | Aprobar y publicar imagen | (Camino Sí) El responsable firma digitalmente la imagen y la libera en el catálogo oficial de Harbor. |
+| 11 | Docente | Descargar imagen local | El docente accede a la imagen aprobada, culminando el proceso de provisión. |
+
 ---
 
 ## 4. Propuesta de estructura organizacional (TO-BE)
