@@ -107,7 +107,9 @@ El Scrum Master actualiza el tablero después de cada reunión. Una actividad so
 
 La gestión de los laboratorios de cómputo tradicionales en la institución presenta ineficiencias estructurales críticas bajo el enfoque de procesos de Organización y Métodos (O&M). Al evaluar el flujo de valor, se evidencia que el modelo tradicional es incompatible con la agilidad que exige nuestro calendario académico.
 
-![diagrama de árbol de problemas: Instalación Manual vs. Falta de Auditoría](./architecture/grafico1.jpg)
+<div align="center">
+  <img src="./architecture/grafico1.jpg" alt="diagrama de árbol de problemas: Instalación Manual vs. Falta de Auditoría" width="80%">
+</div>
 Para dimensionar el impacto de estos problemas en la realidad académica de la facultad, se ha elaborado la siguiente matriz de diagnóstico:
 | Problema Identificado (AS-IS) | Descripción de la Deficiencia | Impacto Operativo y Académico |
 | :--- | :--- | :--- |
@@ -124,7 +126,9 @@ Para dimensionar el impacto de estos problemas en la realidad académica de la f
 
 Para resolver los cuellos de botella detectados en el AS-IS y garantizar que el proyecto mantenga continuidad entre los semestres académicos, se propone adoptar un **Modelo Organizacional Ágil (Spotify Adaptado)**. 
 
-![diagrama de estructura organizacional: Tribu, Chapters y Squads)](./architecture/grafico2.jpg)
+<div align="center">
+  <img src="./architecture/grafico2.jpg" alt="diagrama de estructura organizacional: Tribu, Chapters y Squads" width="90%">
+</div>
 
 El equipo consultor ha definido que esta estructura no implica que los estudiantes actuales desarrollen la plataforma, sino que establece el marco de trabajo metodológico que deberá seguir el equipo técnico asignado para evitar el desorden. La propuesta se organiza de la siguiente manera:
 
@@ -168,8 +172,9 @@ Se establecen directrices obligatorias para regir el ciclo de vida de los conten
 ### 9.5 Importancia de la trazabilidad
 La trazabilidad permite auditar con precisión retrospectiva el origen, creador y estado de integridad de cualquier activo digital desplegado. En el ecosistema del laboratorio, esto significa conocer exactamente qué código fuente dio origen al contenedor, quién compiló la imagen, qué herramientas de terceros fueron añadidas y si se cuenta con los derechos de uso vigentes, facilitando análisis rápidos de causa raíz ante fallas de infraestructura o incidentes de seguridad.
 
-![diagrama: Gobernanza de Seguridad y Firma Digital)](./architecture/trazabilidad.jpg)
-
+<div align="center">
+  <img src="./architecture/trazabilidad.jpg" alt="diagrama: Gobernanza de Seguridad y Firma Digital" width="80%">
+</div>
 Mediante el uso de etiquetas de metadatos integradas en los contenedores dentro de Harbor, es posible auditar de manera precisa los siguientes puntos:
 *   **Origen y autoría:** Quién construyó la imagen (identificando el GitLab runner ejecutor y el commit de origen en el repositorio).
 *   **Aprobación y confianza:** Quién validó y aprobó la publicación (verificable mediante la firma criptográfica del Responsable de Imágenes).
