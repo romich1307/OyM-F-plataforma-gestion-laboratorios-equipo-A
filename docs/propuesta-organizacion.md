@@ -465,6 +465,31 @@ Esta matriz asigna responsabilidades indicando quién **ejecuta (R)**, quién **
 | **C** | Consulted — quien es consultado antes de decidir |
 | **I** | Informed — quien es informado tras la decisión o ejecución |
 
+**Matriz RACI Propuesta (Versión Corregida):**
+
+| Actividad | Director | Encargado Lab. | Admin. Plataforma | Chapter Leads Téc. | Docente | Alumno | Soporte TI |
+|-----------|:--------:|:--------------:|:-----------------:|:------------------:|:-------:|:------:|:----------:|
+| Definición de políticas de uso del lab. | A | R | C | C | C | I | I |
+| Solicitud de imagen para curso | I | I | I | I | R | R | A |
+| Aprobación de imagen Docker | I | A | R | C | C | I | I |
+| Creación de imagen personalizada | I | A | R | C | C | I | I |
+| Escaneo de vulnerabilidades (Trivy) | I | I | R/A | C | I | I | I |
+| Firma digital de imagen (Cosign) | I | I | R/A | I | I | I | I |
+| Reserva de equipos de laboratorio | I | A | I | I | C | R | I |
+| Aprobación de reservas especiales | I | R/A | I | I | C | I | I |
+| Actualización de imágenes (patch) | I | I | R/A | C | I | I | I |
+| Actualización de imágenes (major) | I | A | R | C | C | I | I |
+| Onboarding de usuarios (inicio semestre) | I | R/A | R | I | I | I | I |
+| Offboarding de usuarios (cierre semestre) | I | R/A | R | I | I | I | I |
+| Gestión de incidentes P1/P2 | I | A | R | C | I | I | C |
+| Gestión de incidentes P3/P4 | I | I | C | I | I | I | R/A |
+| Auditoría mensual del catálogo | I | A | R | C | I | I | I |
+| Control de cambios en producción | I | A | R | C | I | I | I |
+| Definición y mejora de procesos | C | A | C | C | C | I | C |
+| Gestión de licencias de software | C | A | R | C | C | I | I |
+| Revisión semestral del sistema | A | R | C | C | C | I | I |
+
+
 
 
 
