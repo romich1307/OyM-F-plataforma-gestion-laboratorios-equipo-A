@@ -108,6 +108,10 @@ La gestión de los laboratorios de cómputo tradicionales en la institución pre
 
 ![diagrama de árbol de problemas: Instalación Manual vs. Falta de Auditoría](./architecture/grafico1.jpg)
 Para dimensionar el impacto de estos problemas en la realidad académica de la facultad, se ha elaborado la siguiente matriz de diagnóstico:
+| Problema Identificado (AS-IS) | Descripción de la Deficiencia | Impacto Operativo y Académico |
+| :--- | :--- | :--- |
+| **Instalación Manual (Cuello de Botella)** | El equipo de soporte instala el software requerido máquina por máquina al inicio del ciclo. | Toma de 2 a 3 semanas. En un semestre de 16 semanas (agosto-diciembre), representa una pérdida de casi el 20% del tiempo lectivo. |
+| **Inconsistencia de Entornos** | Falta de estandarización entre las computadoras del laboratorio y las PCs portátiles de los estudiantes. | Alta tasa de incidentes técnicos en clase ("Funciona en mi máquina") y pérdida de tiempo diagnosticando errores. |
 ## 10. Plan de implementación y viabilidad de recursos
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
