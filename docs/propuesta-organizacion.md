@@ -132,6 +132,23 @@ El roadmap corrige la equivalencia temporal del proyecto original y organiza el 
 
 Cada fase funciona como una puerta de decisión. Si no se cumple el hito de salida, el comité de gobierno deberá corregir el alcance, ampliar el plazo o suspender temporalmente el avance, en lugar de trasladar riesgos abiertos a la fase siguiente.
 
+### 10.2 Planificación de capacidad y horas sostenibles
+
+Para evitar sobrecarga y mantener un ritmo sostenible, se descarta la dedicación original de 25 horas semanales por estudiante. El Product Owner debe ajustar el sprint backlog a la capacidad disponible en cada periodo:
+
+| Periodo académico | Capacidad por estudiante | Criterio de planificación |
+|---|---:|---|
+| Semana regular sin cruces críticos | 10–12 h/semana | Desarrollo, revisión y documentación. |
+| Semana de entregas parciales | 6–8 h/semana | Reducir alcance y priorizar entregables obligatorios. |
+| Semana de exámenes finales | 0–3 h/semana | Sprint mínimo dedicado únicamente a mantenimiento crítico. |
+| Vacaciones intersemestrales | 15–20 h/semana | Solo con disponibilidad confirmada; validación intensiva y documentación. |
+
+La capacidad comprometida del equipo se calculará al inicio de cada sprint:
+
+> **Capacidad del sprint = integrantes disponibles × horas disponibles × factor de enfoque**
+
+Se recomienda utilizar inicialmente un factor de enfoque de 0,70, reservando el 30 % restante para reuniones, aprendizaje, incidencias y tareas no previstas. Si la capacidad disminuye por exámenes u otras asignaturas, se reducirá el alcance antes de aumentar las horas de trabajo.
+
 ## 11. Recomendaciones de implementación
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
