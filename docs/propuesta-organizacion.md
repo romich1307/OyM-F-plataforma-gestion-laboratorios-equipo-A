@@ -229,7 +229,9 @@ Para este proceso se definen dos actores principales:
 
 ### 7.4.3. Diagrama
 
-
+<div align="center">
+  <img src="./diagrams/Reserva de laboratorios.png" alt="Diagrama sobre reserva de laboratorios" width="90%">
+</div>
 
 ### 7.4.4. Tabla de Actividades
 
