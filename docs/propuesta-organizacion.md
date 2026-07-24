@@ -140,7 +140,7 @@ El equipo consultor ha definido que esta estructura no implica que los estudiant
 ---
 
 ## 9. Gobernanza de Imágenes Docker, Software y Licencias
-
+**Responsable:** Romina Camargo Hilachoque — Product Owner
 Como parte de la consultoría se identificó la necesidad de establecer una política formal de gobernanza para la administración de imágenes Docker, software y licencias.
 
 ### 9.1 ¿Qué es la gobernanza del software?
@@ -151,6 +151,18 @@ En una plataforma híbrida de laboratorios basada en microservicios y contenedor
 *   **Evitar la proliferación de contenedores no controlados (Registry Bloat):** Prevenir que se saturen los volúmenes de almacenamiento del registro privado (Harbor) con imágenes obsoletas, duplicadas o sin uso lectivo real.
 *   **Garantizar la Seguridad del Entorno:** Asegurar que ninguna imagen contenga malware o dependencias con vulnerabilidades críticas conocidas que pongan en riesgo la red de la universidad o de la empresa cliente.
 *   **Alineación de Cumplimiento Legal:** Mitigar riesgos de propiedad intelectual y demandas legales controlando estrictamente las licencias del software embebido en los contenedores.
+
+### 9.3 y 9.4 Lineamientos de Gobernanza (Docker y Licencias)
+Se establecen directrices obligatorias para regir el ciclo de vida de los contenedores y el control exhaustivo de la propiedad intelectual. Se resumen en la siguiente matriz de políticas:
+
+| Categoría de Control | Política de Gobernanza Establecida | Impacto Operativo |
+| :--- | :--- | :--- |
+| **Imágenes Base Oficiales** | Solo se autoriza el uso de imágenes base limpias y optimizadas provistas en repositorios seguros de Harbor (ej. Debian o Alpine). | Estandariza el entorno (Golden Images). |
+| **Seguridad (SAST)** | Ninguna imagen será distribuible si el escáner Trivy detecta vulnerabilidades Altas o Críticas sin mitigar. | Previene despliegues inseguros. |
+| **Firma Criptográfica** | Los sistemas solo ejecutarán imágenes que posean una firma válida (Cosign/Sigstore) del Responsable de Imágenes. | Garantiza la autenticidad del código. |
+| **Inmutabilidad** | Prohibido el uso de la etiqueta genérica `:latest`. Las imágenes deben tener versionado académico (ej. `ciclo-2026-B`) en repositorios inmutables. | Asegura que las prácticas no se rompan por actualizaciones sorpresa. |
+| **Software Propietario** | Integración de un gestor de licencias concurrente (Key Server) en Kubernetes. | Limita las instancias activas según el contrato. |
+| **Open Source (Copyleft)** | Licencias como GPL v3 o AGPL requieren auditoría previa y aprobación formal del Product Owner. | Evita el riesgo legal de contagio de código fuente propietario. |
 
 ## 10. Plan de implementación y viabilidad de recursos
 
