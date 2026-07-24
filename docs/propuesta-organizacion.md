@@ -529,6 +529,27 @@ La Matriz de Escalamiento define el procedimiento para escalar problemas o incid
 | **N3** | Encargado de Laboratorio (tercer nivel) | Incidente de alta prioridad con impacto en múltiples usuarios (P1/P2), decisión de política operativa o situación que requiere autorización institucional de nivel intermedio. | Encargado de Laboratorio | ≤ 15 minutos |
 | **N4** | Director de Carrera / Comité TI (nivel institucional) | Impacto institucional grave, brecha de seguridad de datos personales, decisión estratégica que supera la autoridad del Encargado o situación con repercusión externa. | Director de Carrera | Inmediato (guardia activa) |
 
+#### Condiciones de Escalamiento por Tipo de Incidente
+
+| Tipo de incidente | Nivel inicial | Condición de escalamiento al siguiente nivel | Tiempo máx. antes de escalar |
+|-------------------|:-------------:|----------------------------------------------|:-----------------------------:|
+| Usuario no puede iniciar sesión (un solo usuario) | N1 | Si no se resuelve en 4 horas hábiles | 4 h |
+| Harbor inaccesible para todos los usuarios | N2 | Escalar directamente a N3 si no hay resolución en 30 min | 30 min |
+| Kubernetes caído durante clase en curso | N3 | Escalar a N4 si el impacto afecta a más de un curso simultáneamente | 15 min |
+| CVE CRITICAL detectado en imagen publicada | N2 | Escalar a N3 para decisión de retirar imagen del catálogo | Inmediato |
+| Imagen con software sin licencia detectada | N3 | Escalar a N4 si involucra software propietario con riesgo legal | Inmediato |
+| Equipo físico dañado (un equipo) | N1 | Escalar a N2 si el daño afecta la clase en curso | 1 h |
+| Fallo masivo de equipos del laboratorio | N3 | Escalar a N4 si afecta evaluaciones formales | 15 min |
+| Brecha de seguridad / acceso no autorizado | N3 | Escalar a N4 de forma inmediata | Inmediato |
+| Solicitud de excepción a política de licencias | N3 | Siempre requiere aprobación de N4 para software propietario | — |
+| Conflicto de reserva entre docentes | N2 | Escalar a N3 si no se resuelve en 2 horas | 2 h |
+
+---
+
+*Secciones 5 y 6 elaboradas por Jose Manuel Morocco Saico — Analista Organizacional.*
+*Las matrices son coherentes con los hallazgos del Informe de Revisión y Comentarios (Documento 1, sección 6).*
+
+
 
 
 
