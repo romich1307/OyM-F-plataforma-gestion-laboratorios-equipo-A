@@ -18,3 +18,15 @@ A partir de la revisión del repositorio «Plataforma Híbrida de Gestión de La
 Por esta razón, el presente documento propone una estructura organizacional para la gestión del laboratorio. La propuesta define actores, responsabilidades, mecanismos de comunicación y escalamiento, procesos organizacionales, indicadores de desempeño y lineamientos para la gobernanza de imágenes Docker, software y licencias.
 
 El propósito es establecer un modelo de gestión ordenado, seguro, trazable y adaptable a las necesidades académicas, que permita aprovechar adecuadamente los recursos del laboratorio y facilite una futura evolución hacia un entorno empresarial.
+
+## 2. Metodología de la consultoría
+
+**Responsable:** Paola Adamari Mayta Quispe — Scrum Master
+
+La consultoría se desarrolló mediante un enfoque de revisión documental y mejora de procesos. Como fuente principal se utilizó el repositorio proporcionado por el docente, compuesto por los archivos README, el backlog y la documentación ubicada en la carpeta `docs`.
+
+El trabajo se inició con la distribución de los archivos entre los cuatro integrantes. Cada miembro evaluó los documentos asignados considerando cuatro preguntas: qué aspectos estaban correctamente desarrollados, qué elementos podían mejorarse, qué información faltaba y qué acciones se proponían.
+
+Posteriormente, los hallazgos individuales fueron reunidos para elaborar un diagnóstico de la situación actual o AS-IS. Este diagnóstico sirvió como base para construir la propuesta de situación futura o TO-BE, conformada por una estructura organizacional, roles, matrices de responsabilidad, procesos, indicadores y mecanismos de gobernanza.
+
+Finalmente, el equipo revisó la coherencia entre los problemas identificados y las soluciones propuestas. Las actividades fueron coordinadas mediante principios de Scrum y un tablero Kanban simplificado para controlar el avance y la revisión de los entregables.
