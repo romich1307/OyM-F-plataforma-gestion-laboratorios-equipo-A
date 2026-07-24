@@ -251,6 +251,39 @@ Para este proceso se definen dos actores principales:
 | 10 | Estudiante | Registrar Check-out | Al finalizar, el estudiante cierra sesión o registra su salida en el portal. |
 | 11 | Sistema Automatizado | Registrar fin de uso | El sistema marca el equipo como "Disponible" nuevamente, culminando el ciclo operativo. |
 
+## 7.5. Gestión de incidencias (BPMN)
+
+Se modela el proceso para registrar, atender, escalar y resolver incidentes relacionados con la infraestructura, el software o los servicios del laboratorio.
+
+### 7.5.1. Objetivo
+
+Restablecer la operatividad de los equipos de laboratorio lo más rápido posible ante cualquier falla reportada, manteniendo un registro histórico de los problemas para futuras decisiones de mantenimiento.
+
+### 7.5.2. Actores
+
+Para este proceso se definen tres actores principales:
+
+1. **Usuario (Estudiante/Docente):** Quien experimenta el problema (ej. hardware dañado, software colgado) y reporta la falla.  
+2. **Sistema (Helpdesk):** Plataforma de soporte que recibe el reporte, genera el ticket y notifica automáticamente.  
+3. **Soporte Técnico:** Personal encargado de ir al laboratorio, diagnosticar y aplicar la solución técnica.
+
+### 7.5.3. Diagrama
+
+
+
+### 7.5.4. Tabla de Actividades
+
+| Paso | Actor | Actividad (Etiqueta BPMN) | Descripción Detallada |
+| :---: | :---: | ----- | ----- |
+| 1 | Usuario | Reportar falla en equipo | El usuario ingresa al portal de ayuda y describe el problema que presenta su computador. |
+| 2 | Sistema Helpdesk | Generar ticket y prioridad | El sistema crea un código de seguimiento y alerta al equipo de soporte técnico. |
+| 3 | Soporte Técnico | Diagnosticar incidencia | El personal de soporte acude físicamente al equipo para evaluar la gravedad del daño reportado. |
+| 4 | Soporte Técnico | ¿Solución rápida en sitio? | Compuerta de decisión que evalúa si el problema se puede arreglar en ese momento. |
+| 5a | Soporte Técnico | Escalar y bloquear equipo | (Camino No) Si es grave (ej. disco duro quemado), se bloquea el equipo en el sistema para que nadie lo reserve y el proceso finaliza para el soporte de Nivel 1\. |
+| 5b | Soporte Técnico | Resolver problema técnico | (Camino Sí) El personal repara el software o ajusta el hardware dañado rápidamente. |
+| 6 | Sistema Helpdesk | Notificar resolución | El sistema envía una alerta al usuario indicando que su equipo ya está operativo. |
+| 7 | Usuario | Validar solución y cerrar | El usuario confirma que el problema fue solucionado, cerrando el ticket con éxito. |
+
 ---
 
 ## 9. Gobernanza de Imágenes Docker, Software y Licencias
