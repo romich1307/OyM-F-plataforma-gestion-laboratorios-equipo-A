@@ -111,6 +111,7 @@ La gestión de los laboratorios de cómputo tradicionales en la institución pre
   <img src="./architecture/grafico1.jpg" alt="diagrama de árbol de problemas: Instalación Manual vs. Falta de Auditoría" width="80%">
 </div>
 Para dimensionar el impacto de estos problemas en la realidad académica de la facultad, se ha elaborado la siguiente matriz de diagnóstico:
+
 | Problema Identificado (AS-IS) | Descripción de la Deficiencia | Impacto Operativo y Académico |
 | :--- | :--- | :--- |
 | **Instalación Manual (Cuello de Botella)** | El equipo de soporte instala el software requerido máquina por máquina al inicio del ciclo. | Toma de 2 a 3 semanas. En un semestre de 16 semanas (agosto-diciembre), representa una pérdida de casi el 20% del tiempo lectivo. |
@@ -175,12 +176,18 @@ La trazabilidad permite auditar con precisión retrospectiva el origen, creador 
 <div align="center">
   <img src="./architecture/trazabilidad.jpg" alt="diagrama: Gobernanza de Seguridad y Firma Digital" width="80%">
 </div>
+
 Mediante el uso de etiquetas de metadatos integradas en los contenedores dentro de Harbor, es posible auditar de manera precisa los siguientes puntos:
-*   **Origen y autoría:** Quién construyó la imagen (identificando el GitLab runner ejecutor y el commit de origen en el repositorio).
-*   **Aprobación y confianza:** Quién validó y aprobó la publicación (verificable mediante la firma criptográfica del Responsable de Imágenes).
-*   **Estado de seguridad:** Qué vulnerabilidades específicas existían al momento exacto del despliegue en el catálogo.
-*   **Composición interna:** Qué dependencias, librerías y tipos de licencias de software componen la imagen.
-*   **Análisis de Causa Raíz:** Permite rastrear el origen del código causante de un incidente y parchar la imagen base de forma centralizada en minutos.
+
+* **Origen y autoría:** Quién construyó la imagen (identificando el GitLab runner ejecutor y el commit de origen en el repositorio).
+
+* **Aprobación y confianza:** Quién validó y aprobó la publicación (verificable mediante la firma criptográfica del Responsable de Imágenes).
+
+* **Estado de seguridad:** Qué vulnerabilidades específicas existían al momento exacto del despliegue en el catálogo.
+
+* **Composición interna:** Qué dependencias, librerías y tipos de licencias de software componen la imagen.
+
+* **Análisis de Causa Raíz:** Permite rastrear el origen del código causante de un incidente y parchar la imagen base de forma centralizada en minutos.
 
 ### 9.6 Beneficios para una empresa de software
 El modelo diseñado para la universidad es escalable al sector corporativo, generando los siguientes beneficios:
