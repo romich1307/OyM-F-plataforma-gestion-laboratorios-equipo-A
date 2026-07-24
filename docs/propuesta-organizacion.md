@@ -149,6 +149,23 @@ La capacidad comprometida del equipo se calculará al inicio de cada sprint:
 
 Se recomienda utilizar inicialmente un factor de enfoque de 0,70, reservando el 30 % restante para reuniones, aprendizaje, incidencias y tareas no previstas. Si la capacidad disminuye por exámenes u otras asignaturas, se reducirá el alcance antes de aumentar las horas de trabajo.
 
+### 10.3 Matriz referencial de costos e inversión tecnológica
+
+GitLab, Harbor, Kubernetes y Keycloak disponen de ediciones de código abierto, pero su operación requiere infraestructura, energía, almacenamiento, respaldo y personal. La siguiente matriz presenta rangos preliminares en soles; no reemplaza el inventario institucional ni las cotizaciones de proveedores.
+
+| N.º | Categoría | Componentes o supuesto mínimo | Tipo | Presupuesto referencial |
+|---:|---|---|---|---:|
+| 1 | Servidor principal | Servidor físico para Proxmox VE, mínimo 32 GB RAM y 8 núcleos | CAPEX | S/ 8 000–15 000 |
+| 2 | Nodos de alta disponibilidad | Servidores adicionales para Kubernetes; cantidad definida por la prueba de capacidad | CAPEX | S/ 5 000–10 000 por nodo |
+| 3 | Almacenamiento persistente | SSD/NVMe para Harbor y MinIO, mínimo 4 TB brutos antes de redundancia | CAPEX | S/ 1 500–3 000 |
+| 4 | Equipamiento de red | Switch administrable con VLAN para zonas de estudiantes, plataforma y datos | CAPEX | S/ 800–2 000 |
+| 5 | Servicios de nube | Instancias para respaldo, contingencia o picos de demanda | OPEX | S/ 500–1 500 al mes |
+| 6 | Continuidad operativa | Electricidad, UPS, mantenimiento y reposición programada | OPEX | S/ 200–500 al mes |
+| 7 | Contingencia técnica | Repuestos e imprevistos sobre la inversión aprobada | Reserva | 15 % del subtotal CAPEX |
+| 8 | Licencias de software | MATLAB, IDE comerciales u otras herramientas solicitadas por docentes | CAPEX/OPEX | Sujeto al inventario y convenios universitarios |
+
+Los rangos no deben sumarse automáticamente: el escenario final depende de la infraestructura reutilizable, el número de nodos, los meses de servicio en nube y las licencias ya cubiertas por convenios institucionales.
+
 ## 11. Recomendaciones de implementación
 
 **Responsable:** Paola Adamari Mayta Quispe — Scrum Master
