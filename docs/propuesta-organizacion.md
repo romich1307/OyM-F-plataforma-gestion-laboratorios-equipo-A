@@ -442,6 +442,30 @@ En coherencia con las brechas identificadas durante la auditoría (Documento 1),
 
 **Indicadores asociados:** Tiempo promedio de atención de incidentes N1 (objetivo: ≤ 4 horas hábiles), porcentaje de incidentes resueltos sin escalar (objetivo: ≥ 70%).
 
+---
+
+## 6. Matrices Organizacionales
+
+**Responsable:** Jose Manuel Morocco Saico — Analista Organizacional
+
+Presentamos tres herramientas organizacionales clave que definen claramente las responsabilidades, los canales formales de comunicación y los mecanismos de coordinación entre todos los actores del laboratorio. Estas matrices son el resultado directo de las brechas identificadas en la auditoría del Documento 1, donde se determinó que el repositorio original carecía de matrices complementarias de comunicación y escalamiento, y que la Matriz RACI existente presentaba errores de asignación.
+
+---
+
+### 6.1 Matriz RACI
+
+Esta matriz asigna responsabilidades indicando quién **ejecuta (R)**, quién **aprueba (A)**, quién **debe ser consultado (C)** y quién **únicamente debe ser informado (I)**. Se corrigió la versión original del repositorio desdoblando la fila "Solicitud y Aprobación de Imágenes" en dos filas independientes, e incorporando los roles técnicos (Chapter Leads, Encargado de Laboratorio) y los procesos críticos faltantes (Gestión de Incidentes, Onboarding/Offboarding, Auditoría, Control de Cambios).
+
+**Leyenda:**
+
+| Letra | Significado |
+|:-----:|-------------|
+| **R** | Responsible — quien ejecuta la actividad |
+| **A** | Accountable — quien responde por el resultado (único por fila) |
+| **C** | Consulted — quien es consultado antes de decidir |
+| **I** | Informed — quien es informado tras la decisión o ejecución |
+
+
 
 
 
