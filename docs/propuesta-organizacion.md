@@ -310,3 +310,32 @@ La propuesta desarrollada responde a estas necesidades mediante la definición d
 El roadmap propuesto reconoce que la disponibilidad de tiempo, personal e infraestructura es limitada. Por ello, plantea validar el inventario y el presupuesto antes de iniciar adquisiciones, ejecutar un piloto reducido y condicionar el escalamiento a resultados medibles.
 
 Finalmente, se concluye que la implementación debe realizarse gradualmente, evaluando sus resultados antes de ampliar el alcance. La mejora continua, la capacitación, la seguridad y la gobernanza del software serán factores indispensables para asegurar la sostenibilidad de la plataforma.
+
+---
+
+## 5. Definición de Roles y Responsabilidades
+
+**Responsable:** Jose Manuel Morocco Saico — Analista Organizacional
+
+En coherencia con las brechas identificadas durante la auditoría (Documento 1), se propone una estructura de seis roles formales que resuelve las inconsistencias detectadas: la ausencia de una autoridad institucional de alto nivel (Director), la falta de un Encargado de Laboratorio como nivel intermedio de supervisión, y la ambigüedad del rol "Jefe de Laboratorio" que aparecía en el backlog sin definición formal. Cada rol se describe con su misión, responsabilidades, nivel de autoridad y limitaciones de actuación.
+
+---
+
+### 5.1 Director de Carrera / Comité de TI
+
+**Misión:** Garantizar que la plataforma de gestión del laboratorio esté alineada con los objetivos académicos y estratégicos de la carrera, y que su operación cumpla con las normativas institucionales y legales vigentes.
+
+**Responsabilidades:**
+- Aprobar la inversión en infraestructura y las políticas institucionales de uso del laboratorio.
+- Validar las políticas de protección de datos personales de los estudiantes.
+- Autorizar la incorporación de nuevas tecnologías al stack del laboratorio.
+- Presidir la Revisión Semestral del Sistema al cierre de cada período académico.
+- Resolver conflictos de autoridad que no puedan ser gestionados en niveles inferiores.
+- Aprobar o rechazar solicitudes de excepción a las políticas de software y licencias comerciales.
+
+**Nivel de autoridad:** Máxima autoridad institucional. Sus decisiones no requieren aprobación superior dentro del proyecto.
+
+**Limitaciones:** No interviene en la operación diaria del laboratorio ni en decisiones técnicas de implementación.
+
+**Indicadores asociados:** Nivel de satisfacción docente con el laboratorio (encuesta semestral), porcentaje de cumplimiento del plan de inversión tecnológica.
+
