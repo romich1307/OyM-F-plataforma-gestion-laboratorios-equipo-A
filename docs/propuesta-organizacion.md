@@ -122,6 +122,28 @@ Para dimensionar el impacto de estos problemas en la realidad académica de la f
 
 ---
 
+## 4. Propuesta de estructura organizacional (TO-BE)
+**Responsable:** Romina Camargo Hilachoque — Product Owner
+
+Para resolver los cuellos de botella detectados en el AS-IS y garantizar que el proyecto mantenga continuidad entre los semestres académicos, se propone adoptar un **Modelo Organizacional Ágil (Spotify Adaptado)**. 
+
+<div align="center">
+  <img src="./architecture/grafico2.JPG" alt="diagrama de estructura organizacional: Tribu, Chapters y Squads" width="90%">
+</div>
+
+El equipo consultor ha definido que esta estructura no implica que los estudiantes actuales desarrollen la plataforma, sino que establece el marco de trabajo metodológico que deberá seguir el equipo técnico asignado para evitar el desorden. La propuesta se organiza de la siguiente manera:
+
+| Nivel Estructural | Equipo / Rol | Misión Organizacional TO-BE |
+| :--- | :--- | :--- |
+| **Alineación Estratégica** | **Tribu: "Platform Lab"** | Liderada por el Director de Laboratorio (Product Owner General). Asegura la continuidad del proyecto entre semestres y alinea el trabajo técnico con los objetivos académicos. |
+| **Ejecución (Vertical)** | **Squad Core Platform** | Asegura la estabilidad de la red, los servidores (Proxmox VE), el clúster de Kubernetes y el almacenamiento (MinIO). |
+| **Ejecución (Vertical)** | **Squad Image & Container Mgt.** | Enfocado exclusivamente en construir, auditar, asegurar y firmar el catálogo de contenedores cumpliendo tiempos de entrega estrictos. |
+| **Ejecución (Vertical)** | **Squad Hardware & Lab Ops.** | Gestiona el inventario físico, el control de accesos mediante códigos QR y el mantenimiento del hardware. |
+| **Estandarización (Horizontal)** | **Chapters Técnicos** | Liderados por profesores con experiencia industrial. Garantizan la transferencia tecnológica y el uso de buenas prácticas de desarrollo. |
+| **Auditoría (Transversal)** | **Chapter Organización y Métodos** | Asigna un Process Owner a cada squad para mapear flujos, auditar la Matriz RACI y simplificar la burocracia técnica. |
+
+---
+
 ## 7. Procesos organizacionales
 **Responsable:** León Hatches Curo - Analista BPMN
 
@@ -190,27 +212,42 @@ Para este proceso se definen tres actores principales:
 | 10b | Responsable de Imágenes | Aprobar y publicar imagen | (Camino Sí) El responsable firma digitalmente la imagen y la libera en el catálogo oficial de Harbor. |
 | 11 | Docente | Descargar imagen local | El docente accede a la imagen aprobada, culminando el proceso de provisión. |
 
----
+## 7.4. Reserva de laboratorios (BPMN)
 
-## 4. Propuesta de estructura organizacional (TO-BE)
-**Responsable:** Romina Camargo Hilachoque — Product Owner
+Se modela el proceso de asignación y reserva de laboratorios para cursos, prácticas o proyectos, considerando disponibilidad, aprobaciones y uso de los recursos.
 
-Para resolver los cuellos de botella detectados en el AS-IS y garantizar que el proyecto mantenga continuidad entre los semestres académicos, se propone adoptar un **Modelo Organizacional Ágil (Spotify Adaptado)**. 
+### 7.4.1. Objetivo
 
-<div align="center">
-  <img src="./architecture/grafico2.JPG" alt="diagrama de estructura organizacional: Tribu, Chapters y Squads" width="90%">
-</div>
+Gestionar de forma eficiente la asignación y el uso de los equipos físicos del laboratorio, integrando la reserva digital con la validación de asistencia presencial. Esto evita el acaparamiento de recursos, liberando automáticamente los equipos si el usuario no se presenta en el tiempo de tolerancia.
 
-El equipo consultor ha definido que esta estructura no implica que los estudiantes actuales desarrollen la plataforma, sino que establece el marco de trabajo metodológico que deberá seguir el equipo técnico asignado para evitar el desorden. La propuesta se organiza de la siguiente manera:
+### 7.4.2. Actores
 
-| Nivel Estructural | Equipo / Rol | Misión Organizacional TO-BE |
-| :--- | :--- | :--- |
-| **Alineación Estratégica** | **Tribu: "Platform Lab"** | Liderada por el Director de Laboratorio (Product Owner General). Asegura la continuidad del proyecto entre semestres y alinea el trabajo técnico con los objetivos académicos. |
-| **Ejecución (Vertical)** | **Squad Core Platform** | Asegura la estabilidad de la red, los servidores (Proxmox VE), el clúster de Kubernetes y el almacenamiento (MinIO). |
-| **Ejecución (Vertical)** | **Squad Image & Container Mgt.** | Enfocado exclusivamente en construir, auditar, asegurar y firmar el catálogo de contenedores cumpliendo tiempos de entrega estrictos. |
-| **Ejecución (Vertical)** | **Squad Hardware & Lab Ops.** | Gestiona el inventario físico, el control de accesos mediante códigos QR y el mantenimiento del hardware. |
-| **Estandarización (Horizontal)** | **Chapters Técnicos** | Liderados por profesores con experiencia industrial. Garantizan la transferencia tecnológica y el uso de buenas prácticas de desarrollo. |
-| **Auditoría (Transversal)** | **Chapter Organización y Métodos** | Asigna un Process Owner a cada squad para mapear flujos, auditar la Matriz RACI y simplificar la burocracia técnica. |
+Para este proceso se definen dos actores principales:
+
+1. **Estudiante (Usuario Final):** Quien busca disponibilidad, realiza la reserva digital y acude físicamente al laboratorio para el uso del equipo.  
+2. **Sistema Automatizado (Plataforma):** Encargado de validar la disponibilidad, registrar el Check-in mediante Código QR y gestionar la liberación automática de los equipos (temporizador).
+
+### 7.4.3. Diagrama
+
+
+
+### 7.4.4. Tabla de Actividades
+
+| Paso | Actor | Actividad (Etiqueta BPMN) | Descripción Detallada |
+| :---: | :---: | ----- | ----- |
+| 1 | Estudiante | Buscar equipo y horario | El estudiante ingresa al portal del laboratorio y selecciona el bloque horario en el que necesita trabajar. |
+| 2 | Sistema Automatizado | Evaluar disponibilidad | El sistema cruza la solicitud del estudiante con la base de datos de reservas activas. |
+| 3 | Sistema Automatizado | ¿Equipo disponible? | Compuerta de decisión que verifica si hay hardware libre en el horario solicitado. |
+| 4a | Sistema Automatizado | Mostrar alternativas | (Camino No) El sistema sugiere otros horarios disponibles y el proceso finaliza sin reserva. |
+| 4b | Sistema Automatizado | Confirmar reserva digital | (Camino Sí) Se registra la reserva y se bloquea el equipo temporalmente en el sistema. |
+| 5 | Sistema Automatizado | Esperar Check-in (15 min) | Temporizador de tolerancia. El sistema espera a que el estudiante llegue físicamente al laboratorio. |
+| 6 | Estudiante | Escanear Código QR | El estudiante escanea el QR pegado en el monitor del equipo para confirmar su asistencia física. |
+| 7 | Sistema Automatizado | ¿Check-in exitoso? | Compuerta de decisión que evalúa si el estudiante validó su asistencia dentro de los 15 minutos de tolerancia. |
+| 8a | Sistema Automatizado | Cancelar y liberar equipo | (Camino No) Si el tiempo expira sin Check-in, el sistema revoca la reserva, libera el equipo para otros y finaliza el proceso (No-show). |
+| 8b | Sistema Automatizado | Desbloquear equipo | (Camino Sí) El sistema habilita el uso físico del computador. |
+| 9 | Estudiante | Utilizar equipo | El estudiante desarrolla sus actividades académicas o proyectos durante el bloque reservado. |
+| 10 | Estudiante | Registrar Check-out | Al finalizar, el estudiante cierra sesión o registra su salida en el portal. |
+| 11 | Sistema Automatizado | Registrar fin de uso | El sistema marca el equipo como "Disponible" nuevamente, culminando el ciclo operativo. |
 
 ---
 
